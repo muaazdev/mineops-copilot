@@ -1,0 +1,1 @@
+# mineops-copilot
