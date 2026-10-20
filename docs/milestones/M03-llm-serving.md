@@ -1,6 +1,8 @@
-# M3 — LLM client abstraction, Ollama local, vLLM on Colab (gated)
+# M3 — LLM client abstraction, Ollama local, vLLM-ready
 
-**Goal:** a provider-agnostic, OpenAI-compatible client used by all later code; works locally with Ollama; vLLM demonstrated on a Colab GPU with benchmarks.
+> **Scope change (2026-10-20):** all Colab/GPU work (task 5, benchmark parts of task 6, the Colab done-checklist item) is **deferred to M11**, after M10. In M3, do tasks 1–4, write `docs/gpu/vllm-notes.md` as a conceptual + config doc (no benchmark numbers yet), and add the `vllm` provider adapter tested against the fake server. Do not touch Colab.
+
+**Goal:** a provider-agnostic, OpenAI-compatible client used by all later code; works locally with Ollama; `vllm` provider ready by config.
 
 **Cost / approval gates:**
 - Ollama local: free (CPU; warn about RAM and model download size).

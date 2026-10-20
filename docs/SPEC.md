@@ -90,7 +90,7 @@ Python, Streamable HTTP transport, separate service.
 
 - Client abstraction speaks OpenAI Chat Completions; `LLM_PROVIDER=vllm|ollama|hosted`, `LLM_BASE_URL`, `LLM_MODEL`.
 - Local default: Ollama (CPU) with a small multilingual instruct model.
-- vLLM: demonstrated via Colab GPU through the VS Code Colab extension (see `docs/gpu/colab-vllm.md`, owner approval per step), plus K8s/GKE manifests for a GPU node pool (documented, cost-gated).
+- vLLM: provider adapter + config in M3; K8s/GKE manifests for a GPU node pool in M9 (documented, cost-gated). Live GPU demo on Colab is deferred to optional M11 after M10.
 - Model family: a small instruct model with solid Arabic + tool calling (Qwen-family default; pin exact model at M3).
 
 ## 10. Services and APIs
@@ -130,7 +130,7 @@ See `docs/milestones/`. Status in `docs/PROGRESS.md`.
 |---|---|
 | M1 | Repo skeleton, core package, compose, Postgres schema, synthetic data, CI (lint+test) |
 | M2 | Bilingual corpus, ingestion, hybrid retrieval, rerank, retrieval eval |
-| M3 | LLM client abstraction, Ollama local, vLLM on Colab (gated) |
+| M3 | LLM client abstraction, Ollama local, vLLM-ready config |
 | M4 | MCP server + tools + resources |
 | M5 | LangGraph supervisor + agents + HITL |
 | M6 | FastAPI agent-service (SSE, runs, reports, eval) |
@@ -138,6 +138,7 @@ See `docs/milestones/`. Status in `docs/PROGRESS.md`.
 | M8 | Observability + security hardening |
 | M9 | Helm + kind, GKE docs |
 | M10 | CI image builds, README, diagrams, demo script |
+| M11 | (optional, deferred) vLLM live on Colab GPU + benchmarks |
 
 ## 14. Cost policy
 
