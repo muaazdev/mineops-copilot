@@ -76,5 +76,12 @@ ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["packages", "services"]
-addopts = "-ra --import-mode=importlib"
-markers = ["integration: needs Docker (testcontainers Postgres)"]
+addopts = "-ra --import-mode=importlib -m 'not models'"
+markers = [
+  "integration: needs Docker (testcontainers Postgres / OpenSearch / Qdrant)",
+  "models: loads the real BGE-M3 / reranker weights (opt-in: pytest -m models)",
+]
+filterwarnings = [
+  # testcontainers' own OpenSearch module still uses its deprecated wait decorator.
+  "ignore:The @wait_container_is_ready decorator is deprecated:DeprecationWarning",
+]
