@@ -58,7 +58,10 @@ class SentenceTransformerEmbedder:
         self._model: Any = SentenceTransformer(model, revision=revision, device=device)
         self._model.max_seq_length = 1024  # chunks are <= ~660 tokens; keep headroom
         self.batch_size = batch_size
-        self.dim = int(self._model.get_embedding_dimension())
+        dim = self._model.get_embedding_dimension()
+        if dim is None:
+            raise ValueError(f"{model} does not report an embedding dimension")
+        self.dim = int(dim)
         self.name = f"{model}@{revision[:7]}"
 
     def embed_documents(self, texts: Sequence[str]) -> list[list[float]]:
