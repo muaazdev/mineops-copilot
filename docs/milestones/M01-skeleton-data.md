@@ -63,13 +63,13 @@
 - `docs/data-model.md`: ER diagram (Mermaid `erDiagram`) + anomaly table.
 
 ## Done checklist
-- [ ] Fresh clone: `make setup && make up && make migrate && make seed && make test` passes
-- [ ] `make lint` clean
-- [ ] CI green on GitHub
-- [ ] `ground_truth.json` anomalies all detected by tests
-- [ ] `docs/data-model.md` written
-- [ ] `docs/interview/M01.md` written (Postgres roles & least privilege, synthetic data design, uv workspace, testcontainers vs mocks; sovereign note)
-- [ ] `docs/PROGRESS.md` updated, commit `feat(m01): ...`
+- [x] Fresh clone: `make setup && make up && make migrate && make seed && make test` passes
+- [x] `make lint` clean
+- [x] CI green on GitHub
+- [x] `ground_truth.json` anomalies all detected by tests
+- [x] `docs/data-model.md` written
+- [x] `docs/interview/M01.md` written (Postgres roles & least privilege, synthetic data design, uv workspace, testcontainers vs mocks; sovereign note)
+- [x] `docs/PROGRESS.md` updated, commit `feat(m01): ...`
 
 ## Notes (implementation, 2026-10-20)
 

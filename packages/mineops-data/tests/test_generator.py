@@ -10,7 +10,7 @@ from mineops_data.generator import TABLE_COLUMNS, generate, write_dataset
 
 # Golden digest of all CSVs + ground_truth.json for seed 42 / small. If you change the
 # generator on purpose, re-run and update this value in the same commit.
-GOLDEN_SMALL_42 = "6285d46b2e2517ecfa2645d14070c774a5ffd61e7d04106c5ceef591458e5ddf"
+GOLDEN_SMALL_42 = "468088f427635e6ec22f4f6983b86d2ccbf2a60cc5f85ece3215796c8e0508f5"
 
 
 def _digest(out: Path) -> str:

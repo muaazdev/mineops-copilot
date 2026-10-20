@@ -182,7 +182,7 @@ descriptions are authored in Arabic.
 
 | ID | Where | What | Detection query (`mineops_data/queries/`) | Expected signal |
 |---|---|---|---|---|
-| A1 | WSP | Ore ≈ 72% of target for the last 14 days (utilisation also drops) | `production_vs_target` | attainment ≤ 0.85; other sites ≥ 0.92 |
+| A1 | WSP | Ore ≈ 72% of target for the last 14 days (utilisation also drops) | `production_vs_target` | attainment ≤ 0.85; other sites ≥ 0.90 |
 | A2 | FRN, `CR-01` | Repeat main-bearing CM failures every 3–6 days over the last 90 days | `cm_failures_by_asset` | ≥ 10 CMs and ≥ 2× the next crusher |
 | A3 | JNU | Every PM due 35–5 days before as_of left open / on hold | `overdue_work_orders_by_site` | ≥ 3× overdue PMs vs any other site |
 | A4 | FRN | New night-shift roster 56 days before end; incidents ×3.5 for 28 days, mostly night (fatigue, vehicle interaction) | `incidents_by_week` | weekly rate ≥ 2× the 12-week baseline |

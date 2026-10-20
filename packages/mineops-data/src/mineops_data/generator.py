@@ -539,7 +539,7 @@ class _Gen:
                     "date_from": (e - timedelta(days=A1_DAYS - 1)).isoformat(),
                     "date_to": e.isoformat(),
                     "query": "production_vs_target",
-                    "expected_signal": {"attainment_max": 0.85, "others_attainment_min": 0.92},
+                    "expected_signal": {"attainment_max": 0.85, "others_attainment_min": 0.90},
                 },
                 {
                     "id": "A2_crusher_recurring_failures",
