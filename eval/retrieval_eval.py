@@ -29,6 +29,7 @@ from mineops_retrieval.models import Mode
 from mineops_retrieval.retriever import HybridRetriever
 
 ROOT = Path(__file__).resolve().parents[1]
+ANALYSIS_MARKER = "<!-- analysis: hand-written, preserved by retrieval_eval.py -->"
 GROUPS = ("en", "ar", "cross")
 MODE_LABEL = {
     Mode.bm25: "BM25 (OpenSearch)",
@@ -149,7 +150,11 @@ def main() -> None:
     (args.out / "retrieval.json").write_text(json.dumps(results, indent=2) + "\n")
     (args.out / "raw").mkdir(exist_ok=True)
     (args.out / "raw" / "retrieval_runs.json").write_text(json.dumps(raw, indent=1) + "\n")
-    (args.out / "retrieval.md").write_text(render_md(results), encoding="utf-8")
+    md_path = args.out / "retrieval.md"
+    # Keep the hand-written analysis (everything from ANALYSIS_MARKER on) across re-runs.
+    old = md_path.read_text(encoding="utf-8") if md_path.exists() else ""
+    tail = old[old.index(ANALYSIS_MARKER) :] if ANALYSIS_MARKER in old else ""
+    md_path.write_text(render_md(results) + ("\n" + tail if tail else ""), encoding="utf-8")
     retriever.close()
     print(f"wrote {args.out / 'retrieval.md'}")
 
