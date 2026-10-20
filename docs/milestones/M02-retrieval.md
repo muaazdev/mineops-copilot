@@ -20,9 +20,9 @@
 11. Integration tests with testcontainers OpenSearch + Qdrant on a tiny corpus.
 
 ## Done checklist
-- [ ] `make ingest`, `make eval-retrieval` work from clean clone (after `make up-all`)
-- [ ] Results table committed; short analysis paragraph (where hybrid wins, where rerank helps, Arabic results)
-- [ ] `docs/interview/M02.md` (RRF vs weighted, OpenSearch vs Qdrant hybrid, Arabic analyzers, chunking, eval metrics; sovereign note)
+- [x] `make ingest`, `make eval-retrieval` work from clean clone (after `make up-all`)
+- [x] Results table committed; short analysis paragraph (where hybrid wins, where rerank helps, Arabic results)
+- [x] `docs/interview/M02.md` (RRF vs weighted, OpenSearch vs Qdrant hybrid, Arabic analyzers, chunking, eval metrics; sovereign note)
 
 ## Notes (implementation, 2026-10-20)
 
@@ -41,6 +41,14 @@
 - **Language detection:** the share of Arabic-script letters (≥ 0.3), with no dependency.
 - **Restricted hosts:** this sandbox reports about 91% disk used, which crosses OpenSearch's percentage watermark and blocks index creation. `docker-compose.restricted.yml` and the testcontainers OpenSearch both use absolute free-space watermarks instead.
 - **CPU cost (4 vCPU Xeon 2.1 GHz, no AVX-512):** embedding the 65 chunks with BGE-M3 takes about 89 s. The cross-encoder runs at about 1.0 s per pair at max_length 512, so the default 30-candidate rerank costs about 37 s per query. That's acceptable for an offline eval but not for interactive use on this hardware; see the analysis in `eval/results/retrieval.md`.
+
+### Verification (2026-10-20)
+Fresh clone with wiped volumes:
+- `make setup` 70 s, `make up-all RESTRICTED=1` 43 s, `make migrate` 2 s, `make seed SCALE=small` 2 s.
+- `make lint` clean, `make test` 100 passed (2 model tests deselected).
+- `make ingest` 101 s, `make eval-retrieval` 39 min.
+
+Every quality metric reproduced exactly against the committed table. Latency varied by up to about 10% between runs (rerank p50 29.8 s vs 30.8 s).
 
 ### Pinned versions (checked on PyPI / Hugging Face, 2026-10-20)
 | Dependency | Version |
