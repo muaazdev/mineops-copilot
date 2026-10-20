@@ -97,7 +97,7 @@ make fmt
 ## Running in a Claude Code cloud session
 
 - Docker and `docker compose` are available, but nothing runs at session start: run `make up` (or `make up-all`) yourself each session before integration tests.
-- The Docker daemon itself may not be running: if `docker info` fails, start it with `nohup dockerd >/tmp/dockerd.log 2>&1 &` and wait for `docker info` to succeed. The sandbox forbids raising container rlimits, so use `make up-all RESTRICTED=1` (OpenSearch otherwise fails with `error setting rlimit type 8`). Docker Hub may return 429 on anonymous pulls; retry with backoff.
+- The Docker daemon itself may not be running: if `docker info` fails, start it with `nohup dockerd >/tmp/dockerd.log 2>&1 &` and wait for `docker info` to succeed (if it exits with "process with PID … is still running", the PID file is stale from a previous container: `rm -f /var/run/docker.pid /var/run/docker.sock` and start again). The sandbox forbids raising container rlimits, so use `make up-all RESTRICTED=1` (OpenSearch otherwise fails with `error setting rlimit type 8`). Docker Hub may return 429 on anonymous pulls; retry with backoff.
 - Python 3.12 is installed by the environment setup script; always run Python through `uv run`.
 - Network is allowlisted. Model downloads use Hugging Face and Ollama hosts; if a download or image pull is blocked, stop and tell the owner which domain to add — don't try workarounds.
 - Resources are limited: prefer `SCALE=small` and the small Ollama model for local runs; OpenSearch heap stays at 1g.

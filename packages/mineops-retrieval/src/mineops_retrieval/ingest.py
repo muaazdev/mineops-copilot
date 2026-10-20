@@ -66,6 +66,11 @@ def ingest(
     embedder: Embedder | None = None,
     stores: tuple[OpenSearchStore, QdrantStore] | None = None,
 ) -> IngestReport:
+    os_store, qd_store = stores or make_stores(s)
+    # Fail fast: embedding on CPU takes minutes, so check both engines before doing it.
+    if not os_store.client.ping():
+        raise ConnectionError(f"OpenSearch not reachable at {s.opensearch_url} (make up-all)")
+    qd_store.client.get_collections()  # raises if Qdrant is down
     t = {"start": time.perf_counter()}
     chunks: list[Chunk] = chunk_corpus(
         corpus_dir,
@@ -77,7 +82,6 @@ def ingest(
     embedder = embedder or make_embedder(s)
     vectors = embedder.embed_documents([c.text for c in chunks])
     t["embedded"] = time.perf_counter()
-    os_store, qd_store = stores or make_stores(s)
     index = os_store.rebuild(chunks)
     qd_store.rebuild(chunks, vectors, embedder.dim)
     t["indexed"] = time.perf_counter()

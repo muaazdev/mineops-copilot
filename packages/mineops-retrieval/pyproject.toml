@@ -7,10 +7,10 @@ dependencies = [
   "mineops-core",
   "opensearch-py==3.2.0",
   "qdrant-client==1.19.1",
-  # sentence-transformers==6.1.0 + torch==2.14.1 (CPU) are added once download-r2.pytorch.org
-  # is reachable; see docs/milestones/M02-retrieval.md.
+  "sentence-transformers==6.1.0",
+  "torch==2.14.1",  # CPU wheels via the pytorch-cpu index (root pyproject.toml)
   "tokenizers==0.23.3",
-  "huggingface-hub==2.2.0",
+  "huggingface-hub==1.33.0",
   "markdown-it-py==4.2.0",
   "pyyaml==6.0.3",
   "typer==0.27.3",

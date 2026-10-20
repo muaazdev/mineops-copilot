@@ -45,7 +45,7 @@ mineops-core = { workspace = true }
 mineops-data = { workspace = true }
 mineops-retrieval = { workspace = true }
 # CPU-only PyTorch wheels (no ~3 GB of CUDA libs). explicit=true: only torch comes from here.
-# torch = { index = "pytorch-cpu" }  # enabled together with the torch dependency
+torch = { index = "pytorch-cpu" }
 agent-service = { workspace = true }
 mcp-server = { workspace = true }
 
