@@ -13,7 +13,11 @@ dependencies = [
   "huggingface-hub==2.2.0",
   "markdown-it-py==4.2.0",
   "pyyaml==6.0.3",
+  "typer==0.27.3",
 ]
+
+[project.scripts]
+mineops-retrieval = "mineops_retrieval.cli:app"
 
 [tool.uv.sources]
 mineops-core = { workspace = true }

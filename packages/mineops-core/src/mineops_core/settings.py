@@ -45,6 +45,9 @@ class LogSettings(BaseModel):
 class SearchSettings(BaseModel):
     """Retrieval stack (M2). Model revisions are pinned so embeddings are reproducible."""
 
+    # "bge-m3" = SentenceTransformer models below; "hashing" = model-free lexical embedder and
+    # overlap reranker (tests, or machines without torch). Never mix embedders in one index.
+    embedder: Literal["bge-m3", "hashing"] = "bge-m3"
     opensearch_url: str = "http://localhost:9200"
     opensearch_index: str = "mineops-chunks"
     qdrant_url: str = "http://localhost:6333"

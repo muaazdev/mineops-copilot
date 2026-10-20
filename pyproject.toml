@@ -71,7 +71,7 @@ files = ["packages/mineops-core/src", "packages/mineops-data/src", "packages/min
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["testcontainers.*", "faker.*"]
+module = ["testcontainers.*", "sentence_transformers.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
