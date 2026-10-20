@@ -19,4 +19,18 @@ This repo is built milestone by milestone with Claude Code. [`CLAUDE.md`](CLAUDE
 - `/finish-milestone M01` — verify, write interview notes, update progress
 - `/interview-notes M02` — regenerate notes for a milestone
 
-Quickstart arrives with Milestone 1.
+## Quickstart
+
+Needs Docker, [uv](https://docs.astral.sh/uv/) and GNU make. Python 3.12 is installed by uv.
+
+```bash
+make setup     # uv sync, pre-commit hooks, creates .env from .env.example
+make up        # Postgres 16 (compose profile "core"); make up-all adds OpenSearch + Qdrant
+make migrate   # alembic upgrade head: schemas, tables, least-privilege roles/grants
+make seed      # deterministic synthetic data (SEED=42 SCALE=medium; SCALE=small is faster)
+make test      # pytest; integration tests start their own Postgres via testcontainers
+make lint      # ruff + mypy --strict
+make down
+```
+
+Data model, roles and the injected anomalies: [`docs/data-model.md`](docs/data-model.md).

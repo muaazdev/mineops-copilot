@@ -1,0 +1,16 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "MineOps mcp-server (stub until its milestone)"
+requires-python = ">=3.12,<3.13"
+dependencies = ["mineops-core"]
+
+[tool.uv.sources]
+mineops-core = { workspace = true }
+
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_server"]

@@ -1,0 +1,88 @@
+# MineOps Copilot local stack.
+#   make up      -> profile core   (postgres)
+#   make up-all  -> core + search  (opensearch, qdrant)
+#   dashboards   -> add --profile dashboards (optional OpenSearch UI)
+#   obs          -> placeholder, added in M8
+name: mineops
+
+services:
+  postgres:
+    image: postgres:16.15
+    profiles: [core]
+    environment:
+      POSTGRES_DB: ${MINEOPS_DB__NAME:-mineops}
+      POSTGRES_USER: ${MINEOPS_DB__USER:-mineops_owner}
+      POSTGRES_PASSWORD: ${MINEOPS_DB__PASSWORD:?set in .env}
+      MINEOPS_APP_RO_PASSWORD: ${MINEOPS_APP_RO_PASSWORD:?set in .env}
+      MINEOPS_DRAFTS_RW_PASSWORD: ${MINEOPS_DRAFTS_RW_PASSWORD:?set in .env}
+      MINEOPS_AGENT_RW_PASSWORD: ${MINEOPS_AGENT_RW_PASSWORD:?set in .env}
+      MINEOPS_GATEWAY_RW_PASSWORD: ${MINEOPS_GATEWAY_RW_PASSWORD:?set in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  opensearch:
+    image: opensearchproject/opensearch:3.9.0
+    profiles: [search]
+    environment:
+      discovery.type: single-node
+      bootstrap.memory_lock: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms1g -Xmx1g"
+      # !!! LOCAL DEVELOPMENT ONLY !!!
+      # The security plugin (TLS, authN/Z, audit) is DISABLED so the dev loop needs no certs.
+      # Never ship this: kind/GKE values enable security and use real certificates + users.
+      DISABLE_SECURITY_PLUGIN: "true"
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
+    # memlock lets bootstrap.memory_lock pin the heap (no swapping). nofile is left at the
+    # Docker daemon default (1048576 on stock hosts); forcing 65536 fails on hosts that forbid
+    # raising RLIMIT_NOFILE, and single-node discovery does not enforce that bootstrap check.
+    ulimits:
+      memlock: { soft: -1, hard: -1 }
+    ports:
+      - "127.0.0.1:${OPENSEARCH_PORT:-9200}:9200"
+    volumes:
+      - osdata:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s' >/dev/null"]
+      interval: 10s
+      timeout: 8s
+      retries: 30
+      start_period: 30s
+
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:3.9.0
+    profiles: [dashboards]
+    environment:
+      OPENSEARCH_HOSTS: '["http://opensearch:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: "true"  # local only, see opensearch above
+    ports:
+      - "127.0.0.1:${OPENSEARCH_DASHBOARDS_PORT:-5601}:5601"
+    depends_on:
+      opensearch: { condition: service_healthy }
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.2
+    profiles: [search]
+    ports:
+      - "127.0.0.1:${QDRANT_HTTP_PORT:-6333}:6333"
+      - "127.0.0.1:${QDRANT_GRPC_PORT:-6334}:6334"
+    volumes:
+      - qdrantdata:/qdrant/storage
+    healthcheck:
+      # The image ships without curl; speak HTTP over bash's /dev/tcp instead.
+      test: ["CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/127.0.0.1/6333 && printf \"GET /readyz HTTP/1.0\\r\\n\\r\\n\" >&3 && grep -q \"200 OK\" <&3'"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:
+  osdata:
+  qdrantdata:

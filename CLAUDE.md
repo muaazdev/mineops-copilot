@@ -26,6 +26,8 @@ Senior ML engineer. Strong in Python, RAG, LangGraph, MLOps. **Weaker in NestJS/
 3. **Cost gate.** Before doing anything that can cost money — GPU VMs, Colab paid compute, GKE clusters, any cloud resource, hosted LLM API calls — STOP and ask the owner. State what it is, the rough cost driver, and the teardown step. Never create cloud resources without a "yes" in chat.
 4. **Colab gate.** The owner has no local GPU. Colab/GPU work is **deferred to M11 (after M10)** — do not use Colab before then. When M11 starts, use Google Colab through the VS Code Colab extension and **ask before every Colab step**. Respect Colab's usage rules: no tunnels/proxies exposing a Colab runtime as a web service to the local stack. See `docs/gpu/colab-vllm.md`.
 5. **Every milestone ends runnable.** `make up`, `make test`, and that milestone's demo command must work from a clean clone. Commit at the end with message `feat(mXX): <summary>`; smaller commits along the way are fine (conventional commits).
+   - **Branch per milestone**, named after its milestone file: `m01-skeleton-data`, `m02-retrieval`, `m03-llm-serving`, … (`docs/milestones/MXX-<slug>.md` → `mxx-<slug>`). Create it from the latest `main` when the milestone starts; it lands in `main` via a PR (CI runs on the PR — don't add milestone branches to the push trigger).
+   - **Commit without waiting** if the owner hasn't answered a "commit?" question and the cloud container may expire. Commit and push to the milestone branch so work isn't lost, then say so; the owner can still amend.
 6. **Pin versions when you add a dependency.** Check the current stable release at that moment (don't trust memory for library versions/APIs — LangGraph, LangChain, MCP SDK, vLLM, NestJS, OpenSearch clients change fast). Record notable version choices in the milestone file.
 7. **Never commit secrets.** Only `.env.example` with placeholders. Real values come from `.env` (gitignored), K8s Secrets, or GCP Secret Manager.
 8. **No raw SQL from the LLM. Ever.** LLM-facing data access goes only through MCP tools backed by parameterized query templates (see ADR-0003).
@@ -95,6 +97,7 @@ make fmt
 ## Running in a Claude Code cloud session
 
 - Docker and `docker compose` are available, but nothing runs at session start: run `make up` (or `make up-all`) yourself each session before integration tests.
+- The Docker daemon itself may not be running: if `docker info` fails, start it with `nohup dockerd >/tmp/dockerd.log 2>&1 &` and wait for `docker info` to succeed. The sandbox forbids raising container rlimits, so use `make up-all RESTRICTED=1` (OpenSearch otherwise fails with `error setting rlimit type 8`). Docker Hub may return 429 on anonymous pulls; retry with backoff.
 - Python 3.12 is installed by the environment setup script; always run Python through `uv run`.
 - Network is allowlisted. Model downloads use Hugging Face and Ollama hosts; if a download or image pull is blocked, stop and tell the owner which domain to add — don't try workarounds.
 - Resources are limited: prefer `SCALE=small` and the small Ollama model for local runs; OpenSearch heap stays at 1g.
