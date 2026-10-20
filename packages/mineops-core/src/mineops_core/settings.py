@@ -42,6 +42,25 @@ class LogSettings(BaseModel):
     json_format: bool = True
 
 
+class SearchSettings(BaseModel):
+    """Retrieval stack (M2). Model revisions are pinned so embeddings are reproducible."""
+
+    opensearch_url: str = "http://localhost:9200"
+    opensearch_index: str = "mineops-chunks"
+    qdrant_url: str = "http://localhost:6333"
+    qdrant_collection: str = "mineops_chunks"
+    embed_model: str = "BAAI/bge-m3"
+    embed_revision: str = "5617a9f61b028005a4858fdac845db406aefb181"
+    rerank_model: str = "BAAI/bge-reranker-v2-m3"
+    rerank_revision: str = "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e"
+    device: str = "cpu"
+    rrf_k: int = Field(default=60, ge=1)
+    candidates: int = Field(default=30, ge=1)  # per engine, and rerank input size
+    top_k: int = Field(default=8, ge=1)  # rerank output size
+    chunk_max_tokens: int = Field(default=550, ge=64)
+    chunk_overlap_tokens: int = Field(default=60, ge=0)
+
+
 class MineOpsSettings(BaseSettings):
     """Base settings; services subclass and add their own sections.
 
@@ -60,6 +79,7 @@ class MineOpsSettings(BaseSettings):
     environment: Literal["local", "ci", "kind", "gke"] = "local"
     db: DbSettings = DbSettings()
     log: LogSettings = LogSettings()
+    search: SearchSettings = SearchSettings()
 
 
 @lru_cache(maxsize=1)
