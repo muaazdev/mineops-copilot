@@ -92,6 +92,14 @@ make test       # pytest (+ jest once gateway exists)
 make fmt
 ```
 
+## Running in a Claude Code cloud session
+
+- Docker and `docker compose` are available, but nothing runs at session start: run `make up` (or `make up-all`) yourself each session before integration tests.
+- Python 3.12 is installed by the environment setup script; always run Python through `uv run`.
+- Network is allowlisted. Model downloads use Hugging Face and Ollama hosts; if a download or image pull is blocked, stop and tell the owner which domain to add — don't try workarounds.
+- Resources are limited: prefer `SCALE=small` and the small Ollama model for local runs; OpenSearch heap stays at 1g.
+- Long downloads (models, images) can exceed the default command timeout; run them with a longer timeout or in the background.
+
 ## Code conventions
 
 - Python: type hints everywhere, Pydantic v2 models at every boundary, no bare `except`, raise domain errors that map to the error envelope.
