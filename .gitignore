@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- MineOps Copilot ---
+.env
+.venv/
+node_modules/
+data/generated/
+eval/results/raw/
+.mypy_cache/

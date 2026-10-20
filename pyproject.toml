@@ -1,0 +1,62 @@
+[project]
+name = "mineops-copilot"
+version = "0.1.0"
+description = "MineOps Copilot workspace root (not a distributable package)"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "ruff==0.17.1",
+  "mypy==2.4.0",
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "testcontainers[postgres]==4.15.0",
+  "pre-commit==4.7.0",
+  "mineops-core",
+  "mineops-data",
+  "agent-service",
+  "mcp-server",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*", "services/agent-service", "services/mcp-server"]
+
+[tool.uv.sources]
+mineops-core = { workspace = true }
+mineops-data = { workspace = true }
+agent-service = { workspace = true }
+mcp-server = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["data/generated"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# Alembic autogenerate output: long column definitions are clearer unwrapped.
+"**/migrations/versions/*.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mineops_core", "mineops_data", "agent_service", "mcp_server"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["packages/mineops-core/src", "packages/mineops-data/src"]
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["testcontainers.*", "faker.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["packages", "services"]
+addopts = "-ra --import-mode=importlib"
+markers = ["integration: needs Docker (testcontainers Postgres)"]
