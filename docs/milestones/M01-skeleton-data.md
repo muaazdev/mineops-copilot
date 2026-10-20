@@ -86,6 +86,7 @@
 - **Fixed end date:** the generator's window ends on 2026-09-30 by default, so output never depends on today's date. The golden SHA-256 for seed 42 / small is pinned in `tests/test_generator.py`.
 - **LLM-facing roles:** `app_ro` and `drafts_rw` get `statement_timeout=5s` and `idle_in_transaction_session_timeout=30s`.
 - **CLI:** `mineops-data generate` / `mineops-data load --from` use typer; the load is a single-transaction TRUNCATE + `COPY`.
+- **Restricted hosts:** some hosts (including Claude Code cloud sandboxes) refuse to raise container rlimits. On those, OpenSearch fails with `error setting rlimit type 7/8`. The base compose file keeps `memlock: -1` and `bootstrap.memory_lock=true` and leaves `nofile` at the daemon default. `make up-all RESTRICTED=1` adds `docker-compose.restricted.yml`, which resets ulimits and turns memory_lock off.
 
 ### Pinned versions (checked on PyPI / Docker Hub, 2026-10-20)
 | Dependency | Version |
