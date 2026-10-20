@@ -1,7 +1,9 @@
 SHELL := /bin/bash
 SEED ?= 42
 SCALE ?= medium
-COMPOSE := docker compose --env-file .env -f deploy/compose/docker-compose.yml
+# RESTRICTED=1 adds an override for hosts that forbid raising rlimits (see the file header).
+COMPOSE_FILES := -f deploy/compose/docker-compose.yml $(if $(RESTRICTED),-f deploy/compose/docker-compose.restricted.yml)
+COMPOSE := docker compose --env-file .env $(COMPOSE_FILES)
 GEN_DIR := data/generated
 
 .PHONY: setup env up up-all down migrate seed lint test fmt

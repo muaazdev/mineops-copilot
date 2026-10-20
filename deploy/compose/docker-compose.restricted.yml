@@ -1,0 +1,9 @@
+# Override for hosts that forbid raising container rlimits (e.g. Claude Code cloud sandboxes,
+# some rootless/gVisor setups), where OpenSearch fails with "error setting rlimit type 8".
+# Usage: make up-all RESTRICTED=1
+# Effect: no memlock ulimit and bootstrap.memory_lock=false (heap may swap; fine for dev).
+services:
+  opensearch:
+    ulimits: !reset {}
+    environment:
+      bootstrap.memory_lock: "false"
