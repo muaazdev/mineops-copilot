@@ -11,6 +11,7 @@ import typer
 
 from mineops_core.logging import configure_logging
 from mineops_core.settings import get_settings
+from mineops_data.corpus import write_corpus
 from mineops_data.generator import DEFAULT_END_DATE, generate, write_dataset
 from mineops_data.loader import load
 
@@ -52,3 +53,13 @@ def load_cmd(
     """Truncate and reload ops tables (connects as MINEOPS_DB__USER)."""
     counts = load(get_settings().db.conninfo(), src)
     typer.echo(json.dumps({"loaded": counts}))
+
+
+@app.command("corpus")
+def corpus_cmd(
+    out: Annotated[Path, typer.Option(help="output directory")] = Path("data/corpus"),
+) -> None:
+    """Render the bilingual SOP/manual corpus (markdown + frontmatter)."""
+    docs = write_corpus(out)
+    langs = {lang: sum(1 for d in docs if d.lang == lang) for lang in ("en", "ar")}
+    typer.echo(json.dumps({"out": str(out), "documents": len(docs), "by_lang": langs}))
