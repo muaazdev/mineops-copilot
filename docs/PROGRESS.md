@@ -5,7 +5,7 @@ Only the milestone marked **ACTIVE** may be worked on. Change status only with t
 | # | Milestone | Status | Notes |
 |---|---|---|---|
 | M1 | Skeleton, compose, schema, synthetic data, CI | DONE | 56 tests, CI green; see docs/interview/M01.md |
-| M2 | Corpus, ingestion, hybrid retrieval, eval | TODO | |
+| M2 | Corpus, ingestion, hybrid retrieval, eval | ACTIVE | |
 | M3 | LLM client, Ollama, vLLM on Colab (gated) | TODO | |
 | M4 | MCP server + tools | TODO | |
 | M5 | LangGraph agents + HITL | TODO | |
