@@ -49,6 +49,10 @@ class JsonFormatter(logging.Formatter):
         return json.dumps(payload, default=str, ensure_ascii=False)
 
 
+# HTTP client libraries log every request at INFO; that is debug detail for us.
+NOISY_LOGGERS = ("httpx", "httpcore", "urllib3", "opensearch", "huggingface_hub")
+
+
 def configure_logging(service: str, level: str = "INFO", json_format: bool = True) -> None:
     """Install a single stdout handler on the root logger (idempotent)."""
     handler = logging.StreamHandler(sys.stdout)
@@ -59,6 +63,8 @@ def configure_logging(service: str, level: str = "INFO", json_format: bool = Tru
     root = logging.getLogger()
     root.handlers[:] = [handler]
     root.setLevel(level)
+    for name in NOISY_LOGGERS:
+        logging.getLogger(name).setLevel(max(logging.WARNING, logging.getLevelName(level)))
 
 
 @contextmanager

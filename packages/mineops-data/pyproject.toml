@@ -10,6 +10,7 @@ dependencies = [
   "psycopg[binary]==3.3.6",
   "numpy==2.5.4",
   "typer==0.27.3",
+  "pyyaml==6.0.3",
 ]
 
 [project.scripts]

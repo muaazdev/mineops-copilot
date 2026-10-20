@@ -6,7 +6,7 @@ COMPOSE_FILES := -f deploy/compose/docker-compose.yml $(if $(RESTRICTED),-f depl
 COMPOSE := docker compose --env-file .env $(COMPOSE_FILES)
 GEN_DIR := data/generated
 
-.PHONY: setup env up up-all down migrate seed lint test fmt
+.PHONY: setup env up up-all down migrate seed corpus ingest eval-retrieval lint test fmt
 
 env:
 	@test -f .env || { cp .env.example .env; echo "created .env from .env.example"; }
@@ -31,6 +31,15 @@ migrate:
 seed:
 	uv run mineops-data generate --seed $(SEED) --scale $(SCALE) --out $(GEN_DIR)/
 	uv run mineops-data load --from $(GEN_DIR)/
+
+corpus:
+	uv run mineops-data corpus --out data/corpus
+
+ingest:
+	uv run mineops-retrieval ingest --corpus data/corpus
+
+eval-retrieval:
+	uv run python eval/retrieval_eval.py
 
 lint:
 	uv run ruff check .

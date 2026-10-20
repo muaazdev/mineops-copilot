@@ -31,7 +31,10 @@ jobs:
           uv run ruff format --check .
       - name: Mypy
         run: uv run mypy
-      - name: Pre-pull Postgres image (testcontainers)
-        run: docker pull postgres:16.15
+      - name: Pre-pull images (testcontainers)
+        run: |
+          docker pull -q postgres:16.15
+          docker pull -q opensearchproject/opensearch:3.9.0
+          docker pull -q qdrant/qdrant:v1.19.2
       - name: Pytest
-        run: uv run pytest --cov=mineops_core --cov=mineops_data --cov-report=term
+        run: uv run pytest --cov=mineops_core --cov=mineops_data --cov=mineops_retrieval --cov-report=term

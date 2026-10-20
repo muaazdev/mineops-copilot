@@ -1,0 +1,136 @@
+# Falcon Ridge Mining document topics: emergency response.
+
+- code: ER-001
+  doc_type: emergency_response
+  site: all
+  asset_type: haul_truck
+  effective_date: 2025-03-24
+  en:
+    title: Fire on Mobile Equipment
+    purpose: Sets the immediate actions for an operator and the emergency response team when a fire occurs on a haul truck or other mobile machine.
+    scope: All mobile equipment fitted with automatic fire suppression systems.
+    ppe: [Fire-retardant coveralls for the emergency response team, Breathing apparatus for the response team]
+    steps:
+      - Steer the machine away from fuel bays, other equipment and overhead power lines if it is safe to keep moving.
+      - Stop the machine, apply the park brake, lower the body and shut down the engine.
+      - Actuate the fire suppression system manually from the cab if it has not discharged automatically.
+      - Call "Emergency, emergency, emergency" on the radio with the machine number and location.
+      - Evacuate the cab and move at least 50 m upwind; do not return to the machine.
+      - Do not open the engine compartment; opening it feeds the fire with oxygen.
+      - Treat the tyres as heat-damaged after any fire and apply the 30 m exclusion and 24-hour wait in MM-HT-002.
+    hazards:
+      - Re-ignition after suppression — keep 50 m away until the emergency team declares it safe.
+      - Tyre explosion after fire exposure — 30 m exclusion for 24 hours.
+      - Toxic smoke — move upwind.
+    references: [MM-HT-002, SP-005, SOP-004]
+  ar:
+    title: حريق في المعدات المتنقلة
+    purpose: يحدد الإجراءات الفورية للمشغل ولفريق الاستجابة للطوارئ عند حدوث حريق في شاحنة نقل أو أي معدة متنقلة أخرى.
+    scope: جميع المعدات المتنقلة المزودة بأنظمة إطفاء الحريق التلقائية.
+    ppe: [بدلات مقاومة للحريق لفريق الاستجابة, أجهزة التنفس لفريق الاستجابة]
+    steps:
+      - وجّه المعدة بعيداً عن محطات الوقود والمعدات الأخرى وخطوط الكهرباء العلوية إذا كان الاستمرار في الحركة آمناً.
+      - أوقف المعدة وفعّل فرامل الوقوف وأنزل الصندوق وأطفئ المحرك.
+      - شغّل نظام إطفاء الحريق يدوياً من المقصورة إذا لم يعمل تلقائياً.
+      - أعلن "طوارئ، طوارئ، طوارئ" عبر اللاسلكي مع ذكر رقم المعدة وموقعها.
+      - اخرج من المقصورة وابتعد 50 متراً على الأقل بعكس اتجاه الريح، ولا تعد إلى المعدة.
+      - لا تفتح حجرة المحرك، لأن فتحها يزود الحريق بالأكسجين.
+      - تعامل مع الإطارات على أنها متضررة بالحرارة بعد أي حريق، وطبق منطقة الحظر 30 متراً والانتظار 24 ساعة وفق MM-HT-002.
+    hazards:
+      - اشتعال الحريق مرة أخرى بعد الإطفاء — ابق على بعد 50 متراً حتى يعلن فريق الطوارئ أن المنطقة آمنة.
+      - انفجار الإطارات بعد التعرض للحريق — منطقة حظر 30 متراً لمدة 24 ساعة.
+      - الدخان السام — الابتعاد بعكس اتجاه الريح.
+    references: [MM-HT-002, SP-005, SOP-004]
+
+- code: ER-002
+  doc_type: emergency_response
+  site: JNU
+  asset_type: all
+  effective_date: 2025-06-09
+  ar:
+    title: الإخلاء في المنجم الجوفي وغرف اللجوء
+    purpose: يحدد إجراءات الإخلاء عند الحريق أو تسرب الغاز في منجم جبل نور الجوفي واستخدام غرف اللجوء.
+    scope: جميع الأشخاص الموجودين تحت الأرض في منجم جبل نور.
+    ppe: [جهاز الإنقاذ الذاتي, مصباح الخوذة, جهاز كشف الغاز الشخصي]
+    steps:
+      - عند سماع إنذار الإخلاء أو شم غاز الإنذار (رائحة الإيثيل مركبتان) أوقف العمل فوراً.
+      - ارتدِ جهاز الإنقاذ الذاتي عند ظهور الدخان أو انخفاض الأكسجين، ويوفر الجهاز 30 دقيقة من الأكسجين على الأقل.
+      - اتجه إلى المخرج عبر طريق الهواء النقي المحدد بالإشارات الخضراء.
+      - إذا كان الطريق إلى السطح مقطوعاً فاتجه إلى أقرب غرفة لجوء، ولا تبعد أي نقطة عمل أكثر من 750 متراً عن غرفة لجوء.
+      - أغلق باب غرفة اللجوء وشغّل نظام الهواء المضغوط واتصل بغرفة التحكم عبر الهاتف المخصص.
+      - سجل اسمك في لوحة الحضور داخل الغرفة، وانتظر فريق الإنقاذ ولا تغادر دون تعليمات.
+    hazards:
+      - الدخان والغازات السامة — جهاز الإنقاذ الذاتي وطريق الهواء النقي.
+      - الضياع في الظلام والدخان — اتبع خط الإرشاد والإشارات العاكسة.
+      - التأخر في الوصول إلى مكان آمن — غرف اللجوء على مسافة لا تزيد عن 750 متراً.
+    references: [SOP-006, SOP-007, ER-004]
+
+- code: ER-003
+  doc_type: emergency_response
+  site: all
+  asset_type: all
+  effective_date: 2024-11-25
+  en:
+    title: Hazardous Substance Spill Response
+    purpose: Describes the response to spills of diesel, hydraulic oil, process reagents and explosives precursors.
+    scope: All sites, including fuel bays, workshops, the processing plant and the explosives magazine.
+    ppe: [Chemical-resistant gloves, Safety glasses or face shield, Chemical-resistant apron, Respirator as per the safety data sheet]
+    steps:
+      - Stop the source of the spill if it is safe to do so (close the valve, stop the pump, upright the container).
+      - Isolate the area and keep ignition sources at least 15 m away from flammable spills.
+      - Check the safety data sheet (SDS) for the substance before choosing PPE and the clean-up method.
+      - Contain the spill with spill kit booms or earth bunds to stop it reaching drains or water courses.
+      - Spills larger than 200 litres, or any spill of ammonium nitrate, must be reported to the environmental officer within 1 hour.
+      - Collect contaminated soil and absorbent into labelled hazardous waste bins.
+    hazards:
+      - Fire from flammable vapours — ignition control within 15 m.
+      - Skin and eye exposure — SDS-based PPE.
+      - Environmental contamination — containment and reporting.
+    references: [SOP-004, SP-006, SOP-003]
+
+- code: ER-004
+  doc_type: emergency_response
+  site: all
+  asset_type: all
+  effective_date: 2025-01-29
+  ar:
+    title: الطوارئ الطبية وإخلاء المصابين
+    purpose: يحدد الاستجابة للطوارئ الطبية والإصابات الخطيرة وإخلاء المصابين من مناطق العمل إلى العيادة أو المستشفى.
+    scope: جميع المواقع بما فيها منطقة الحفرة والمصانع والأعمال الجوفية.
+    ppe: [قفازات طبية, قناع الإنعاش]
+    steps:
+      - أعلن الطوارئ عبر اللاسلكي على القناة 1 مع ذكر الموقع وعدد المصابين ونوع الإصابة.
+      - لا تحرك المصاب إلا إذا كان في خطر مباشر، وانتظر وصول المسعف.
+      - يقدم الإسعافات الأولية فقط الأشخاص المدربون، ويتم استخدام جهاز الصدمات الكهربائية المتوفر في كل مركبة طوارئ.
+      - يجب أن تصل سيارة الإسعاف إلى أي نقطة في الحفرة خلال 15 دقيقة.
+      - في حالات ضربة الشمس ابدأ التبريد فوراً بالماء والظل أثناء انتظار سيارة الإسعاف (انظر SP-002).
+      - يتم نقل الحالات الخطيرة إلى المستشفى بالتنسيق مع غرفة التحكم.
+      - يتم الإبلاغ عن الحادث وفق SP-006.
+    hazards:
+      - تفاقم الإصابة بسبب التحريك الخاطئ — عدم تحريك المصاب إلا عند الخطر.
+      - تأخر وصول المساعدة — الإعلان الواضح عبر اللاسلكي وزمن الاستجابة 15 دقيقة.
+      - العدوى — استخدام القفازات الطبية.
+    references: [SP-002, SP-006, ER-002]
+
+- code: ER-005
+  doc_type: emergency_response
+  site: all
+  asset_type: pump
+  effective_date: 2025-11-17
+  en:
+    title: Pit Flooding and Dewatering Pump Failure
+    purpose: Defines the response when sump levels rise above the high-level alarm or dewatering pumps fail during heavy rain.
+    scope: In-pit sumps at the open-pit sites and the main sump at Jabal Noor Underground.
+    ppe: [Life jacket, Safety helmet, High-visibility vest]
+    steps:
+      - On a high-level alarm (3.0 m), start the standby pump and notify the shift supervisor.
+      - If the level keeps rising for 30 minutes, withdraw equipment and persons from the lower benches or levels.
+      - At Jabal Noor, if the main sump level reaches 4.0 m, evacuate the levels below the sump per ER-002.
+      - Mobilise the diesel emergency pump from the store; it can be operating within 2 hours.
+      - Do not drive through standing water deeper than half the wheel height.
+      - Record water levels every 30 minutes until the level is back below the pump start level.
+    hazards:
+      - Drowning and equipment loss — withdrawal and evacuation triggers.
+      - Electrocution from submerged electrical equipment — isolate submerged circuits.
+      - Wall instability after flooding — geotechnical inspection before re-entry.
+    references: [MM-PU-001, MM-PU-002, SOP-010, ER-002]

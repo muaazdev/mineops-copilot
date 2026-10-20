@@ -34,3 +34,16 @@ make down
 ```
 
 Data model, roles and the injected anomalies: [`docs/data-model.md`](docs/data-model.md).
+
+### Retrieval (M2)
+
+```bash
+make up-all            # + OpenSearch 3.9 and Qdrant 1.19 (RESTRICTED=1 on constrained hosts)
+make corpus            # re-render data/corpus/ from the authored YAML (already committed)
+make ingest            # chunk -> BGE-M3 embeddings -> OpenSearch (BM25 en/ar) + Qdrant
+uv run mineops-retrieval search "crusher bearing temperature trip" --site FRN
+make eval-retrieval    # BM25 / dense / hybrid / hybrid+rerank -> eval/results/retrieval.md
+```
+
+First use downloads `BAAI/bge-m3` and `BAAI/bge-reranker-v2-m3` (~4.4 GB, pinned revisions).
+Results and analysis: [`eval/results/retrieval.md`](eval/results/retrieval.md).

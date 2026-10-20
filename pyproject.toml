@@ -11,16 +11,31 @@ dev = [
   "mypy==2.4.0",
   "pytest==9.1.1",
   "pytest-cov==7.1.0",
-  "testcontainers[postgres]==4.15.0",
+  "testcontainers[postgres,opensearch,qdrant]==4.15.0",
+  "hypothesis==6.170.4",
+  "types-PyYAML==6.0.12.20260906",
   "pre-commit==4.7.0",
   "mineops-core",
   "mineops-data",
+  "mineops-retrieval",
   "agent-service",
   "mcp-server",
 ]
 
 [tool.uv]
 package = false
+# Lock only for platforms we run on (dev laptops, CI, K8s nodes). Also keeps uv from fetching
+# metadata for exotic torch wheels (s390x/ppc64le) that live on a different mirror host.
+environments = [
+  "sys_platform == 'linux' and platform_machine == 'x86_64'",
+  "sys_platform == 'linux' and platform_machine == 'aarch64'",
+  "sys_platform == 'darwin'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
 
 [tool.uv.workspace]
 members = ["packages/*", "services/agent-service", "services/mcp-server"]
@@ -28,6 +43,9 @@ members = ["packages/*", "services/agent-service", "services/mcp-server"]
 [tool.uv.sources]
 mineops-core = { workspace = true }
 mineops-data = { workspace = true }
+mineops-retrieval = { workspace = true }
+# CPU-only PyTorch wheels (no ~3 GB of CUDA libs). explicit=true: only torch comes from here.
+torch = { index = "pytorch-cpu" }
 agent-service = { workspace = true }
 mcp-server = { workspace = true }
 
@@ -44,19 +62,26 @@ select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
 "**/migrations/versions/*.py" = ["E501"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["mineops_core", "mineops_data", "agent_service", "mcp_server"]
+known-first-party = ["mineops_core", "mineops_data", "mineops_retrieval", "agent_service", "mcp_server"]
 
 [tool.mypy]
 python_version = "3.12"
 strict = true
-files = ["packages/mineops-core/src", "packages/mineops-data/src"]
+files = ["packages/mineops-core/src", "packages/mineops-data/src", "packages/mineops-retrieval/src"]
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["testcontainers.*", "faker.*"]
+module = ["testcontainers.*", "sentence_transformers.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["packages", "services"]
-addopts = "-ra --import-mode=importlib"
-markers = ["integration: needs Docker (testcontainers Postgres)"]
+addopts = "-ra --import-mode=importlib -m 'not models'"
+markers = [
+  "integration: needs Docker (testcontainers Postgres / OpenSearch / Qdrant)",
+  "models: loads the real BGE-M3 / reranker weights (opt-in: pytest -m models)",
+]
+filterwarnings = [
+  # testcontainers' own OpenSearch module still uses its deprecated wait decorator.
+  "ignore:The @wait_container_is_ready decorator is deprecated:DeprecationWarning",
+]

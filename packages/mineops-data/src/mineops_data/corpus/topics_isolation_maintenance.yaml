@@ -1,0 +1,618 @@
+# Falcon Ridge Mining document topics: isolation (LOTO) and maintenance manuals.
+# Arabic blocks are authored in Arabic (not machine-translated at runtime). All content is fictional.
+# A topic with `versions` renders one document per version; later versions supersede earlier ones.
+# Version-level `en`/`ar` blocks override the topic-level fields for that version only.
+
+- code: LOTO-001
+  doc_type: loto
+  site: all
+  asset_type: all
+  en:
+    title: Lockout/Tagout — General Isolation Procedure
+    purpose: >-
+      Defines how hazardous energy is isolated, locked, tagged and verified before any person
+      works on plant or mobile equipment at Falcon Ridge Mining sites.
+    scope: >-
+      Applies to all employees and contractors performing maintenance, cleaning, inspection or
+      unjamming on equipment with electrical, mechanical, hydraulic, pneumatic or gravitational energy.
+    ppe: [Safety helmet, Safety glasses, Arc-rated gloves when operating isolators, Steel-capped boots]
+    steps:
+      - Notify the area supervisor and the control room of the planned isolation and its expected duration.
+      - Identify every energy source using the equipment isolation sheet; never rely on memory.
+      - Stop the equipment using the normal stop control before operating any isolator.
+      - Open the isolator at each energy source and apply a personal danger lock and a signed danger tag.
+      - Every worker applies their own personal lock. When more than three workers are involved, use a group lock box and each worker locks the box.
+      - Release or restrain stored energy (bleed hydraulics, block raised components, discharge capacitors).
+      - Verify zero energy by attempting to start the equipment, then test with a calibrated voltage tester (test-before-touch).
+      - Record the isolation on the isolation register with the lock numbers.
+      - On completion, each worker removes only their own lock after confirming all persons are clear.
+    hazards:
+      - Unexpected start-up from a missed energy source — controlled by the isolation sheet and test-before-touch.
+      - Stored hydraulic or gravitational energy — controlled by bleeding and mechanical blocking.
+      - Removal of another person's lock — prohibited; lock removal by force requires the site manager's approval.
+    references: [LOTO-002, LOTO-003, LOTO-004, LOTO-005]
+  ar:
+    title: إجراء العزل والإقفال ووضع البطاقات (LOTO) — الإجراء العام
+    purpose: >-
+      يحدد هذا الإجراء طريقة عزل مصادر الطاقة الخطرة وإقفالها ووضع بطاقات التحذير عليها والتحقق من
+      انعدام الطاقة قبل أن يعمل أي شخص على المعدات الثابتة أو المتنقلة في مواقع شركة فالكون ريدج للتعدين.
+    scope: >-
+      ينطبق على جميع الموظفين والمقاولين الذين يقومون بأعمال الصيانة أو التنظيف أو الفحص أو إزالة الانسداد
+      في المعدات التي تحتوي على طاقة كهربائية أو ميكانيكية أو هيدروليكية أو هوائية أو طاقة الجاذبية.
+    ppe: [خوذة السلامة, نظارات السلامة, قفازات مقاومة للقوس الكهربائي عند تشغيل المفاتيح العازلة, أحذية السلامة ذات المقدمة الفولاذية]
+    steps:
+      - أبلغ مشرف المنطقة وغرفة التحكم بالعزل المخطط له ومدته المتوقعة.
+      - حدد جميع مصادر الطاقة باستخدام ورقة عزل المعدة، ولا تعتمد على الذاكرة.
+      - أوقف المعدة باستخدام زر الإيقاف العادي قبل تشغيل أي مفتاح عازل.
+      - افتح المفتاح العازل عند كل مصدر طاقة وضع قفل الخطر الشخصي وبطاقة خطر موقعة.
+      - يضع كل عامل قفله الشخصي. إذا زاد عدد العمال عن ثلاثة فاستخدم صندوق الأقفال الجماعي ويقفل كل عامل الصندوق.
+      - حرر الطاقة المخزنة أو قيدها (تفريغ الضغط الهيدروليكي، وتثبيت الأجزاء المرفوعة، وتفريغ المكثفات).
+      - تحقق من انعدام الطاقة بمحاولة تشغيل المعدة، ثم افحص بجهاز اختبار جهد معاير قبل اللمس.
+      - سجل العزل في سجل العزل مع أرقام الأقفال.
+      - عند الانتهاء يزيل كل عامل قفله فقط بعد التأكد من ابتعاد جميع الأشخاص.
+    hazards:
+      - التشغيل المفاجئ بسبب مصدر طاقة غير معزول — يتم التحكم به عبر ورقة العزل والفحص قبل اللمس.
+      - الطاقة الهيدروليكية أو طاقة الجاذبية المخزنة — يتم التحكم بها بالتفريغ والتثبيت الميكانيكي.
+      - إزالة قفل شخص آخر — ممنوعة، والإزالة القسرية تتطلب موافقة مدير الموقع.
+    references: [LOTO-002, LOTO-003, LOTO-004, LOTO-005]
+  versions:
+    - version: 1
+      effective_date: 2024-03-01
+      en:
+        steps:
+          - Notify the area supervisor of the planned isolation.
+          - Identify the energy sources for the equipment.
+          - Stop the equipment using the normal stop control.
+          - Open the isolator and apply a danger lock and tag.
+          - Up to three workers may share a single danger lock on the isolation point, provided all names are written on the tag.
+          - Release stored energy where practical.
+          - Verify zero energy by attempting to start the equipment.
+          - On completion, the lock holder removes the lock after confirming all persons are clear.
+      ar:
+        steps:
+          - أبلغ مشرف المنطقة بالعزل المخطط له.
+          - حدد مصادر الطاقة للمعدة.
+          - أوقف المعدة باستخدام زر الإيقاف العادي.
+          - افتح المفتاح العازل وضع قفل الخطر والبطاقة.
+          - يجوز لثلاثة عمال كحد أقصى مشاركة قفل خطر واحد على نقطة العزل بشرط كتابة جميع الأسماء على البطاقة.
+          - حرر الطاقة المخزنة حيثما أمكن.
+          - تحقق من انعدام الطاقة بمحاولة تشغيل المعدة.
+          - عند الانتهاء يزيل حامل القفل القفل بعد التأكد من ابتعاد جميع الأشخاص.
+    - version: 2
+      effective_date: 2026-02-01
+
+- code: LOTO-002
+  doc_type: loto
+  site: all
+  asset_type: conveyor
+  en:
+    title: Conveyor Isolation and Belt Restraint
+    purpose: >-
+      Describes the isolation of belt conveyors before work on pulleys, idlers, scrapers, chutes or the belt itself.
+    scope: All belt conveyors including overland, plant feed and stacker conveyors.
+    ppe: [Safety helmet, Safety glasses, Hearing protection, Cut-resistant gloves, High-visibility vest]
+    steps:
+      - Run the conveyor empty before stopping where the process allows.
+      - Isolate the drive motor at the motor control centre (MCC) and apply personal locks per LOTO-001.
+      - Isolate the take-up winch or release gravity take-up tension using the take-up lock pin.
+      - On conveyors inclined more than 8 degrees, fit the mechanical belt clamp below the work area to prevent belt rollback.
+      - Test the pull-wire emergency stop and the local stop station; they must not be used as isolation points.
+      - Verify zero energy by attempting a start from the local station.
+      - Remove the belt clamp only after all tools and persons are clear.
+    hazards:
+      - Belt rollback on inclined sections — controlled by the mechanical belt clamp.
+      - Stored tension in the take-up — controlled by pinning or lowering the counterweight.
+      - Nip points at pulleys and idlers — guards remain fitted until isolation is verified.
+    references: [LOTO-001, MM-CV-001, MM-CV-002]
+  versions:
+    - version: 1
+      effective_date: 2024-06-15
+      en:
+        steps:
+          - Stop the conveyor using the local stop station.
+          - Isolate the drive motor at the motor control centre (MCC) and apply personal locks per LOTO-001.
+          - Isolate the take-up winch where fitted.
+          - Test the pull-wire emergency stop.
+          - Verify zero energy by attempting a start from the local station.
+    - version: 2
+      effective_date: 2025-11-10
+
+- code: LOTO-003
+  doc_type: loto
+  site: all
+  asset_type: crusher
+  effective_date: 2025-04-20
+  en:
+    title: Crusher Isolation and Entry into the Crushing Chamber
+    purpose: >-
+      Sets the isolation and entry requirements for jaw and cone crushers, including clearing blockages
+      and liner inspection inside the crushing chamber.
+    scope: Primary and secondary crushers, their feeders and discharge conveyors.
+    ppe: [Safety helmet, Safety glasses, Dust mask P2 or better, Fall-arrest harness when above 1.8 m, Steel-capped boots]
+    steps:
+      - Isolate the apron feeder, the crusher main drive and the discharge conveyor per LOTO-001.
+      - Isolate the hydraulic setting system and lower the hydraulic pressure to zero; verify on the gauge.
+      - Never enter the chamber to clear a blockage while the crusher is energised; use the rock breaker from outside.
+      - Ventilate the chamber and test the atmosphere for dust before entry; treat entry as a confined space per SP-004.
+      - Install the chamber access platform and anchor harness lanyards to the designated points.
+      - Remove loose rock from above the work position before starting liner inspection.
+      - A standby person remains at the access door with radio contact for the full entry.
+    hazards:
+      - Falling rock from the feed opening — remove loose material and use the overhead protection.
+      - Hydraulic setting cylinders moving — release pressure and verify on the gauge.
+      - Engulfment in the feed hopper — the apron feeder must be isolated and the hopper emptied.
+    references: [LOTO-001, SP-004, MM-CR-001, SOP-009]
+  ar:
+    title: عزل الكسارة والدخول إلى غرفة التكسير
+    purpose: >-
+      يحدد متطلبات العزل والدخول للكسارات الفكية والمخروطية، بما في ذلك إزالة الانسدادات وفحص البطانات
+      داخل غرفة التكسير.
+    scope: الكسارات الأولية والثانوية والمغذيات والنواقل المرتبطة بها.
+    ppe: [خوذة السلامة, نظارات السلامة, كمامة غبار من فئة P2 أو أعلى, حزام مانع للسقوط عند العمل على ارتفاع يزيد عن 1.8 متر, أحذية السلامة]
+    steps:
+      - اعزل المغذي ذو السير المعدني ومحرك الكسارة الرئيسي والناقل الخارج وفق الإجراء LOTO-001.
+      - اعزل نظام الضبط الهيدروليكي وخفض الضغط الهيدروليكي إلى الصفر وتحقق من ذلك على مقياس الضغط.
+      - لا تدخل الغرفة لإزالة انسداد والكسارة موصولة بالطاقة، واستخدم كاسر الصخور من الخارج.
+      - قم بتهوية الغرفة وافحص الهواء من الغبار قبل الدخول، وتعامل مع الدخول كأنه دخول إلى مكان محصور وفق SP-004.
+      - ركب منصة الوصول إلى الغرفة واربط حبال الأمان بنقاط التثبيت المحددة.
+      - أزل الصخور المفككة من فوق موقع العمل قبل البدء بفحص البطانات.
+      - يبقى شخص احتياطي عند باب الدخول مع اتصال لاسلكي طوال فترة الدخول.
+    hazards:
+      - سقوط الصخور من فتحة التغذية — أزل المواد المفككة واستخدم الحماية العلوية.
+      - حركة أسطوانات الضبط الهيدروليكية — حرر الضغط وتحقق منه على المقياس.
+      - الانطمار في قادوس التغذية — يجب عزل المغذي وتفريغ القادوس.
+    references: [LOTO-001, SP-004, MM-CR-001, SOP-009]
+
+- code: LOTO-004
+  doc_type: loto
+  site: all
+  asset_type: excavator
+  effective_date: 2025-02-12
+  en:
+    title: Release of Stored Hydraulic Energy on Excavators
+    purpose: Describes how residual hydraulic pressure is released before opening any hydraulic circuit on an excavator.
+    scope: Hydraulic excavators and front shovels at all open-pit sites.
+    ppe: [Safety helmet, Face shield, Hydraulic-oil resistant gloves, Steel-capped boots]
+    steps:
+      - Lower the boom, stick and bucket fully to the ground; never work under a raised attachment.
+      - Stop the engine, apply the swing lock and the travel park brake, and isolate the battery.
+      - Cycle each joystick through all functions at least five times to release pilot and main pressure.
+      - Open the hydraulic tank breather slowly to release tank pressure.
+      - Confirm zero pressure at the diagnostic test port with a gauge before loosening any fitting.
+      - Allow hydraulic oil to cool below 50 °C before disconnecting hoses.
+    hazards:
+      - High-pressure fluid injection injury — never search for leaks with a hand; use cardboard.
+      - Hot oil burns — wait for oil to cool below 50 °C.
+      - Unexpected boom movement — attachments must rest on the ground.
+    references: [LOTO-001, MM-EX-001]
+
+- code: LOTO-005
+  doc_type: loto
+  site: all
+  asset_type: all
+  effective_date: 2024-09-30
+  en:
+    title: High Voltage Switching and Isolation
+    purpose: Controls switching, isolation and earthing of high voltage (above 1000 V) electrical equipment.
+    scope: Substations, trailing cables for electric shovels and drills, and HV pump motors.
+    ppe: [Arc flash suit rated for the incident energy, Insulating gloves class 2, Face shield, Insulating mat]
+    steps:
+      - Only authorised HV switching operators may switch HV equipment; a switching program is approved before work.
+      - Switch off and rack out the circuit breaker; lock the breaker in the racked-out position.
+      - Prove the circuit dead with an approved HV voltage detector tested before and after use.
+      - Apply portable earths to all phases at the point of work.
+      - Issue an electrical access permit listing the isolation and earth points.
+      - Cancel the permit and remove earths in reverse order before re-energising.
+    hazards:
+      - Arc flash during switching — wear the rated arc flash suit and stand to the side of the panel.
+      - Back-feed from generators or capacitors — earth all phases at the point of work.
+      - Damaged trailing cables — inspect cable couplers before energising.
+    references: [LOTO-001, SP-005]
+
+- code: MM-HT-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: haul_truck
+  en:
+    title: Haul Truck 250-Hour Service
+    purpose: Lists the tasks for the scheduled service of rigid-frame haul trucks.
+    scope: All rigid-frame haul trucks in the Falcon Ridge Mining fleet.
+    ppe: [Safety helmet, Safety glasses, Nitrile gloves, Steel-capped boots, Hearing protection]
+    steps:
+      - Park the truck on level ground in the workshop bay, body down, and isolate per LOTO-001.
+      - Take an engine oil sample for laboratory analysis at every 250-hour service.
+      - Change the engine oil and oil filters every 500 hours when the previous oil analysis is within limits; otherwise change at 250 hours.
+      - Replace the primary and secondary fuel filters every 250 hours.
+      - Grease all body pivot pins, steering cylinder pins and suspension pins.
+      - Check the brake wear indicators and record the remaining brake pad thickness.
+      - Inspect the air filter restriction indicator and replace the primary element if in the red zone.
+      - Check the tyre pressures cold and record them (see MM-HT-002).
+    hazards:
+      - Hot engine oil — allow the engine to cool for at least 30 minutes.
+      - Body falling — the body must be down or pinned with the body-up safety pin.
+      - Slips on oil spills — clean spills immediately and use absorbent.
+    references: [LOTO-001, MM-HT-002, MM-HT-003]
+  ar:
+    title: صيانة شاحنة النقل كل 250 ساعة
+    purpose: يحدد مهام الصيانة الدورية لشاحنات النقل ذات الهيكل الصلب.
+    scope: جميع شاحنات النقل ذات الهيكل الصلب في أسطول فالكون ريدج للتعدين.
+    ppe: [خوذة السلامة, نظارات السلامة, قفازات النتريل, أحذية السلامة, واقي السمع]
+    steps:
+      - أوقف الشاحنة على أرض مستوية في ورشة الصيانة مع خفض الصندوق، واعزلها وفق LOTO-001.
+      - خذ عينة من زيت المحرك لتحليلها في المختبر عند كل صيانة 250 ساعة.
+      - غيّر زيت المحرك وفلاتر الزيت كل 500 ساعة إذا كانت نتيجة تحليل الزيت السابقة ضمن الحدود، وإلا فغيّرها كل 250 ساعة.
+      - استبدل فلاتر الوقود الأولية والثانوية كل 250 ساعة.
+      - شحّم جميع محاور الصندوق ومحاور أسطوانات التوجيه ومحاور نظام التعليق.
+      - افحص مؤشرات تآكل الفرامل وسجل السماكة المتبقية لبطانات الفرامل.
+      - افحص مؤشر انسداد فلتر الهواء واستبدل العنصر الأولي إذا كان المؤشر في المنطقة الحمراء.
+      - افحص ضغط الإطارات وهي باردة وسجله (انظر MM-HT-002).
+    hazards:
+      - زيت المحرك الساخن — اترك المحرك يبرد لمدة 30 دقيقة على الأقل.
+      - سقوط الصندوق — يجب أن يكون الصندوق منخفضاً أو مثبتاً بمسمار الأمان.
+      - الانزلاق بسبب انسكاب الزيت — نظف الانسكاب فوراً واستخدم المواد الماصة.
+    references: [LOTO-001, MM-HT-002, MM-HT-003]
+  versions:
+    - version: 1
+      effective_date: 2024-01-15
+      en:
+        steps:
+          - Park the truck on level ground in the workshop bay, body down, and isolate per LOTO-001.
+          - Change the engine oil and oil filters every 250 hours.
+          - Replace the primary and secondary fuel filters every 250 hours.
+          - Grease all body pivot pins, steering cylinder pins and suspension pins.
+          - Check the brake wear indicators.
+          - Inspect the air filter restriction indicator.
+          - Check the tyre pressures.
+      ar:
+        steps:
+          - أوقف الشاحنة على أرض مستوية في ورشة الصيانة مع خفض الصندوق، واعزلها وفق LOTO-001.
+          - غيّر زيت المحرك وفلاتر الزيت كل 250 ساعة.
+          - استبدل فلاتر الوقود الأولية والثانوية كل 250 ساعة.
+          - شحّم جميع محاور الصندوق ومحاور أسطوانات التوجيه ومحاور نظام التعليق.
+          - افحص مؤشرات تآكل الفرامل.
+          - افحص مؤشر انسداد فلتر الهواء.
+          - افحص ضغط الإطارات.
+    - version: 2
+      effective_date: 2025-09-01
+
+- code: MM-HT-002
+  doc_type: maintenance_manual
+  site: all
+  asset_type: haul_truck
+  effective_date: 2025-03-03
+  en:
+    title: Haul Truck Tyre Inspection, Inflation and Change
+    purpose: Covers inspection, nitrogen inflation and changing of large off-the-road (OTR) haul truck tyres.
+    scope: All haul truck tyres; tyre changes are performed only by trained tyre fitters.
+    ppe: [Safety helmet, Face shield, Heavy-duty gloves, Steel-capped boots, High-visibility vest]
+    steps:
+      - Inspect tyres at every pre-start for cuts, bulges, exposed cords and heat damage.
+      - Inflate tyres with dry nitrogen only; never use compressed air on OTR tyres.
+      - Check pressures cold; the target cold pressure is 700 kPa unless the tyre data sheet states otherwise.
+      - Any tyre that has run below 80% of the target pressure must be fully deflated and inspected before reinflation.
+      - Establish a 30 m exclusion zone around a truck with a suspected heat-damaged tyre and wait 24 hours before approach.
+      - Use the tyre handler for all wheel removal; never stand in the trajectory of the rim and lock ring.
+    hazards:
+      - Tyre explosion from pyrolysis after heat exposure — 30 m exclusion and 24-hour wait.
+      - Lock ring ejection during inflation — use an inflation cage and remote inflation line.
+      - Crushing by a falling wheel — use the tyre handler and wheel chocks.
+    references: [MM-HT-001, SOP-001, ER-001]
+
+- code: MM-HT-003
+  doc_type: maintenance_manual
+  site: all
+  asset_type: haul_truck
+  effective_date: 2025-06-18
+  ar:
+    title: فحص واختبار نظام الفرامل في شاحنات النقل
+    purpose: يحدد طريقة الفحص الدوري لنظام الفرامل واختبار فرامل الخدمة وفرامل الوقوف في شاحنات النقل.
+    scope: جميع شاحنات النقل في المواقع المكشوفة والطرق المنحدرة.
+    ppe: [خوذة السلامة, نظارات السلامة, قفازات العمل, أحذية السلامة, سترة عالية الوضوح]
+    steps:
+      - افحص سماكة بطانات الفرامل عند كل صيانة 250 ساعة، واستبدلها إذا قلت السماكة المتبقية عن 6 مم.
+      - افحص خطوط الزيت الهيدروليكي للفرامل بحثاً عن التسرب أو التشقق.
+      - نفذ اختبار فرامل الوقوف على منحدر بنسبة 15% مع حمولة كاملة مرة كل شهر.
+      - نفذ اختبار فرامل الخدمة على طريق اختبار مستوٍ بسرعة 15 كم/ساعة وسجل مسافة التوقف.
+      - إذا تجاوزت مسافة التوقف الحد المسموح فأوقف الشاحنة عن العمل حتى يتم الإصلاح.
+      - افحص نظام التبريد الخاص بالفرامل ومستوى الزيت بعد كل اختبار.
+    hazards:
+      - تحرك الشاحنة أثناء الاختبار — يجب إخلاء منطقة الاختبار من المركبات الخفيفة والأشخاص.
+      - ارتفاع حرارة الفرامل — اترك الفرامل تبرد قبل الفحص اليدوي.
+      - تسرب الزيت الهيدروليكي تحت الضغط — لا تلمس الخطوط أثناء التشغيل.
+    references: [MM-HT-001, SOP-001, SOP-002]
+
+- code: MM-EX-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: excavator
+  effective_date: 2025-01-22
+  en:
+    title: Excavator Swing System Maintenance
+    purpose: Defines inspection and maintenance of the swing motor, swing gearbox and slew ring of hydraulic excavators.
+    scope: Hydraulic excavators of 120 t class and above.
+    ppe: [Safety helmet, Safety glasses, Gloves, Steel-capped boots, Fall-arrest harness on the upper structure]
+    steps:
+      - Release stored hydraulic energy per LOTO-004 and apply the swing lock pin.
+      - Check the swing gearbox oil level every 250 hours and take an oil sample every 500 hours.
+      - Grease the slew ring through all nipples while rotating the upper structure in 90-degree steps.
+      - Measure slew ring bearing clearance with a dial gauge every 2000 hours; record the rocking value.
+      - Inspect the swing motor case drain flow; a flow above 8 L/min indicates internal wear.
+      - Torque the slew ring bolts to the value on the OEM data sheet in a star pattern.
+    hazards:
+      - Rotation of the upper structure during greasing — keep clear of the swing radius and use a spotter.
+      - Falls from the upper structure — use the handrails and harness.
+      - Hydraulic fluid injection — test ports only with pressure released.
+    references: [LOTO-004, MM-EX-002]
+
+- code: MM-EX-002
+  doc_type: maintenance_manual
+  site: all
+  asset_type: excavator
+  effective_date: 2025-05-05
+  en:
+    title: Bucket Teeth and Adapter Replacement
+    purpose: Describes the inspection and replacement of ground engaging tools (teeth, adapters, lip shrouds) on excavator buckets.
+    scope: All excavator and loader buckets.
+    ppe: [Safety helmet, Face shield, Heavy-duty gloves, Steel-capped boots, Hearing protection]
+    steps:
+      - Lower the bucket onto timber blocks with the teeth horizontal and isolate the machine per LOTO-004.
+      - Replace a tooth when it is worn to the wear line or less than 50 mm of tip remains.
+      - Inspect adapters for cracks using dye penetrant every 1000 hours; replace any cracked adapter before it fails in the dig face.
+      - Use the hammerless locking tool; never strike hardened pins with a steel hammer.
+      - Report every lost tooth immediately so it can be recovered before it reaches the crusher.
+    hazards:
+      - Flying metal fragments from striking pins — use hammerless locks and a face shield.
+      - Bucket movement — bucket must rest on blocks with the machine isolated.
+      - Tramp metal in the crusher from lost teeth — immediate reporting and metal detection on the conveyor.
+    references: [LOTO-004, MM-CR-002]
+  ar:
+    title: استبدال أسنان الدلو ومحولاتها
+    purpose: يصف فحص واستبدال أدوات الحفر (الأسنان والمحولات وأغطية الشفة) في دلاء الحفارات.
+    scope: جميع دلاء الحفارات واللوادر.
+    ppe: [خوذة السلامة, واقي الوجه, قفازات ثقيلة, أحذية السلامة, واقي السمع]
+    steps:
+      - أنزل الدلو على كتل خشبية مع جعل الأسنان أفقية واعزل الآلة وفق LOTO-004.
+      - استبدل السن عندما يصل التآكل إلى خط التآكل أو يتبقى أقل من 50 مم من طرفه.
+      - افحص المحولات بحثاً عن الشقوق باستخدام الصبغة النافذة كل 1000 ساعة، واستبدل أي محول متشقق قبل أن ينكسر في واجهة الحفر.
+      - استخدم أداة القفل بدون مطرقة، ولا تطرق المسامير المقساة بمطرقة فولاذية.
+      - أبلغ فوراً عن أي سن مفقود حتى يتم استرجاعه قبل وصوله إلى الكسارة.
+    hazards:
+      - تطاير الشظايا المعدنية عند طرق المسامير — استخدم الأقفال بدون مطرقة وواقي الوجه.
+      - حركة الدلو — يجب أن يرتكز الدلو على الكتل مع عزل الآلة.
+      - دخول المعادن الغريبة إلى الكسارة بسبب الأسنان المفقودة — الإبلاغ الفوري وكشف المعادن على الناقل.
+    references: [LOTO-004, MM-CR-002]
+
+- code: MM-CR-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: crusher
+  en:
+    title: Jaw Crusher Liner Inspection and Change
+    purpose: Sets the inspection frequency and replacement criteria for jaw crusher fixed and moving jaw liners.
+    scope: All primary jaw crushers.
+    ppe: [Safety helmet, Safety glasses, Dust mask P2, Heavy-duty gloves, Fall-arrest harness]
+    steps:
+      - Isolate the crusher and enter the chamber only per LOTO-003.
+      - Measure liner thickness at the top, middle and bottom of each jaw every week with the profile gauge.
+      - Replace jaw liners when the remaining thickness at any point is 40% of the original thickness or less.
+      - Rotate (turn) jaw liners top-to-bottom once, at about 25% wear, to even out the wear profile.
+      - Use the liner lifting tool and the overhead crane; never lift liners by hand or by the wedge bolts.
+      - Re-torque the wedge bolts after the first 8 hours of operation following a liner change.
+      - Reset the closed-side setting (CSS) after the change and record it on the crusher log.
+    hazards:
+      - Liner falling during removal — use the lifting tool and keep out of the drop zone.
+      - Wedge bolt failure — re-torque after 8 hours.
+      - Frame damage from over-worn liners — replace at 40% remaining thickness.
+    references: [LOTO-003, MM-CR-002, SOP-009]
+  versions:
+    - version: 1
+      effective_date: 2024-05-20
+      en:
+        steps:
+          - Isolate the crusher and enter the chamber only per LOTO-003.
+          - Measure liner thickness monthly with a tape measure.
+          - Replace jaw liners when the remaining thickness at any point is 30% of the original thickness or less.
+          - Use the liner lifting tool and the overhead crane.
+          - Reset the closed-side setting (CSS) after the change.
+    - version: 2
+      effective_date: 2026-01-12
+
+- code: MM-CR-002
+  doc_type: maintenance_manual
+  site: all
+  asset_type: crusher
+  effective_date: 2025-07-07
+  en:
+    title: Crusher Main Bearing Lubrication and Temperature Monitoring
+    purpose: >-
+      Describes lubrication of the crusher main (eccentric shaft) bearings and the response to high bearing
+      temperature alarms, which are the leading indicator of bearing failure.
+    scope: Jaw and cone crushers fitted with circulating oil lubrication and bearing RTD sensors.
+    ppe: [Safety helmet, Safety glasses, Nitrile gloves, Hearing protection]
+    steps:
+      - Check the lube oil tank level, oil temperature and filter differential pressure at the start of every shift.
+      - The main bearing temperature alarm is set at 85 °C and the automatic trip at 95 °C; never bypass the trip.
+      - On an 85 °C alarm, reduce feed, check oil flow and cooler operation, and notify maintenance.
+      - After any trip on high bearing temperature, take an oil sample and inspect the magnetic plug for metal before restart.
+      - Two or more high-temperature trips on the same bearing within 30 days require a bearing inspection work order (priority high).
+      - Change the lube oil filter at a differential pressure of 1.5 bar or every 500 hours.
+      - Record bearing temperatures hourly on the crusher log during the first 24 hours after any bearing work.
+    hazards:
+      - Bearing seizure and shaft damage — respond to alarms, never bypass the trip.
+      - Hot oil — allow the system to cool before opening the lube circuit.
+      - Rotating parts — isolate per LOTO-003 before any inspection.
+    references: [LOTO-003, MM-CR-001]
+  ar:
+    title: تزييت المحمل الرئيسي للكسارة ومراقبة درجة حرارته
+    purpose: >-
+      يصف تزييت المحامل الرئيسية للكسارة (محامل العمود اللامركزي) والاستجابة لإنذارات ارتفاع درجة حرارة
+      المحمل، والتي تعد المؤشر المبكر لتلف المحمل.
+    scope: الكسارات الفكية والمخروطية المزودة بنظام تزييت بالزيت الدوار وحساسات حرارة المحامل.
+    ppe: [خوذة السلامة, نظارات السلامة, قفازات النتريل, واقي السمع]
+    steps:
+      - افحص مستوى خزان زيت التزييت ودرجة حرارة الزيت وفرق الضغط على الفلتر في بداية كل وردية.
+      - يُضبط إنذار حرارة المحمل الرئيسي عند 85 درجة مئوية والإيقاف التلقائي عند 95 درجة مئوية، ولا يجوز تجاوز الإيقاف التلقائي أبداً.
+      - عند إنذار 85 درجة مئوية خفض التغذية وافحص تدفق الزيت وعمل المبرد وأبلغ الصيانة.
+      - بعد أي إيقاف بسبب ارتفاع حرارة المحمل خذ عينة زيت وافحص السدادة المغناطيسية بحثاً عن معادن قبل إعادة التشغيل.
+      - إذا تكرر الإيقاف بسبب ارتفاع الحرارة مرتين أو أكثر لنفس المحمل خلال 30 يوماً فيجب فتح أمر عمل لفحص المحمل بأولوية عالية.
+      - غيّر فلتر زيت التزييت عند فرق ضغط 1.5 بار أو كل 500 ساعة.
+      - سجل درجات حرارة المحامل كل ساعة في سجل الكسارة خلال أول 24 ساعة بعد أي عمل على المحمل.
+    hazards:
+      - التصاق المحمل وتلف العمود — استجب للإنذارات ولا تتجاوز الإيقاف التلقائي.
+      - الزيت الساخن — اترك النظام يبرد قبل فتح دائرة التزييت.
+      - الأجزاء الدوارة — اعزل الكسارة وفق LOTO-003 قبل أي فحص.
+    references: [LOTO-003, MM-CR-001]
+
+- code: MM-CV-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: conveyor
+  effective_date: 2024-11-11
+  en:
+    title: Conveyor Belt Tracking and Alignment
+    purpose: Describes how to correct belt mistracking, which causes edge damage and spillage at the tail pulley.
+    scope: All troughed belt conveyors.
+    ppe: [Safety helmet, Safety glasses, Hearing protection, Gloves, High-visibility vest]
+    steps:
+      - Observe the belt running empty and loaded from a safe position outside the guards.
+      - Identify where mistracking starts; correct from the tail end towards the head end.
+      - Isolate the conveyor per LOTO-002 before adjusting any idler or pulley.
+      - Knock idlers forward in the direction of belt travel on the side the belt runs towards, no more than 10 mm at a time.
+      - Check that the tail pulley is square to the belt within 2 mm across its face.
+      - Clean material build-up from pulleys and return idlers; build-up is the most common cause of mistracking.
+      - Run the conveyor for 15 minutes after each adjustment before further changes.
+    hazards:
+      - Nip points — never adjust idlers on a running conveyor.
+      - Spillage clean-up near moving belts — isolate before shovelling under the belt.
+      - Belt edge damage — correct tracking early.
+    references: [LOTO-002, MM-CV-002]
+
+- code: MM-CV-002
+  doc_type: maintenance_manual
+  site: all
+  asset_type: conveyor
+  effective_date: 2025-08-25
+  ar:
+    title: وصل سيور النواقل بطريقة الفلكنة الساخنة
+    purpose: يحدد خطوات وصل سيور النواقل المطاطية بطريقة الفلكنة الساخنة لضمان قوة الوصلة وعمرها.
+    scope: جميع سيور النواقل ذات الطبقات النسيجية والسيور ذات الأسلاك الفولاذية.
+    ppe: [خوذة السلامة, نظارات السلامة, قفازات مقاومة للحرارة, كمامة للأبخرة, أحذية السلامة]
+    steps:
+      - اعزل الناقل وفق LOTO-002 وثبت السير بمشابك السير على جانبي منطقة الوصل.
+      - قص طرفي السير بزاوية 22 درجة وفق ورقة بيانات الشركة المصنعة.
+      - جهز الطبقات على شكل درجات بطول متساوٍ ونظف السطح من الأتربة والزيوت.
+      - ضع المادة اللاصقة والمطاط غير المعالج حسب التعليمات.
+      - شغّل مكبس الفلكنة عند درجة حرارة 145 درجة مئوية وضغط 1.2 ميجاباسكال للمدة المحددة لسماكة السير.
+      - اترك الوصلة تبرد تحت الضغط حتى 70 درجة مئوية قبل فك المكبس.
+      - سجل رقم الوصلة وتاريخها واسم الفني في سجل النواقل.
+    hazards:
+      - الحروق من مكبس الفلكنة — استخدم القفازات المقاومة للحرارة.
+      - استنشاق الأبخرة — اعمل في مكان جيد التهوية واستخدم الكمامة.
+      - حركة السير المفاجئة — يجب تثبيت السير بالمشابك وعزل الناقل.
+    references: [LOTO-002, MM-CV-001]
+
+- code: MM-PU-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: pump
+  en:
+    title: Dewatering Pump Mechanical Seal Replacement
+    purpose: Describes replacement of the mechanical seal on centrifugal dewatering pumps.
+    scope: Pit and underground dewatering pumps.
+    ppe: [Safety helmet, Safety glasses, Chemical-resistant gloves, Steel-capped boots]
+    steps:
+      - Isolate the pump motor per LOTO-001 and close and lock the suction and discharge valves.
+      - Drain the pump casing and confirm zero pressure at the casing drain.
+      - Remove the coupling guard and the coupling spacer; mark the shaft position.
+      - Fit a cartridge double mechanical seal; single seals are no longer approved for dewatering duty.
+      - Set the barrier fluid pressure 1.5 bar above the pump stuffing box pressure.
+      - Check shaft alignment with a laser tool after reassembly; maximum offset 0.05 mm.
+      - Run the pump and check for seal leakage; the acceptable leakage is zero visible drops.
+    hazards:
+      - Pressurised water — valves closed and locked, casing drained.
+      - Rotating shaft — coupling guard refitted before start.
+      - Heavy components — use lifting equipment for the pump casing.
+    references: [LOTO-001, MM-PU-002, ER-005]
+  versions:
+    - version: 1
+      effective_date: 2024-08-05
+      en:
+        steps:
+          - Isolate the pump motor per LOTO-001 and close the suction and discharge valves.
+          - Drain the pump casing.
+          - Remove the coupling guard and the coupling spacer.
+          - Fit a single mechanical seal of the type on the pump data sheet.
+          - Set the flush water pressure 1 bar above the pump stuffing box pressure.
+          - Check shaft alignment after reassembly.
+          - Run the pump and check for seal leakage; up to 10 drops per minute is acceptable.
+    - version: 2
+      effective_date: 2026-03-02
+
+- code: MM-PU-002
+  doc_type: maintenance_manual
+  site: JNU
+  asset_type: pump
+  effective_date: 2025-10-14
+  en:
+    title: Underground Pump Motor Overload Troubleshooting
+    purpose: Gives the diagnostic sequence when an underground dewatering pump motor trips on overload.
+    scope: Submersible and skid-mounted dewatering pumps at Jabal Noor Underground.
+    ppe: [Safety helmet with cap lamp, Self-rescuer, Insulating gloves, Safety glasses]
+    steps:
+      - Do not reset an overload more than once; a second trip requires an electrician.
+      - Check the motor current on all three phases; an imbalance above 10% indicates a supply or winding fault.
+      - Measure insulation resistance with a 1000 V insulation tester; below 2 megohm the motor must be removed.
+      - Check the pump for blockage by solids at the suction strainer.
+      - Confirm the sump water level; running the pump dry or at snore causes overheating and overload trips.
+      - Record the cause on the work order and on the pump log.
+    hazards:
+      - Electric shock — isolate per LOTO-001 before opening terminal boxes.
+      - Flooding of the level if pumping stops — start the standby pump before work (see ER-005).
+      - Working in wet conditions — use insulating gloves and mats.
+    references: [LOTO-001, MM-PU-001, ER-005]
+
+- code: MM-DR-001
+  doc_type: maintenance_manual
+  site: all
+  asset_type: drill
+  effective_date: 2025-02-27
+  en:
+    title: Drill Rig Rotation Head Hydraulic Checks
+    purpose: Describes checks on the rotation head hydraulic circuit of blast-hole drill rigs.
+    scope: Rotary and down-the-hole blast-hole drill rigs.
+    ppe: [Safety helmet, Safety glasses, Gloves, Hearing protection, Dust mask]
+    steps:
+      - Lower the mast to the travel position or pin it vertical, and isolate per LOTO-004.
+      - Check rotation pressure at the test port; normal drilling pressure is 150 to 180 bar.
+      - A pressure drop of more than 20 bar at full flow indicates rotation motor wear.
+      - Inspect rotation head hoses for chafing at the mast guides every shift.
+      - Check the hydraulic oil temperature; stop drilling if it exceeds 80 °C.
+      - Replace the return filter every 500 hours or when the bypass indicator shows.
+    hazards:
+      - Falling objects from the mast — keep clear of the mast area during checks.
+      - High-pressure hydraulic leaks — never feel for leaks by hand.
+      - Dust exposure — use the dust collector and wear a mask.
+    references: [LOTO-004, MM-DR-002, SOP-003]
+
+- code: MM-DR-002
+  doc_type: maintenance_manual
+  site: all
+  asset_type: drill
+  effective_date: 2025-09-09
+  ar:
+    title: صيانة ضاغط الهواء في أجهزة الحفر
+    purpose: يحدد مهام الصيانة الدورية لضاغط الهواء اللولبي في أجهزة حفر ثقوب التفجير.
+    scope: جميع أجهزة الحفر الدوارة وأجهزة الحفر بالمطرقة السفلية.
+    ppe: [خوذة السلامة, نظارات السلامة, واقي السمع, قفازات العمل, كمامة الغبار]
+    steps:
+      - أوقف الضاغط وحرر ضغط خزان الفصل بالكامل قبل فتح أي غطاء، وتحقق من أن المقياس يشير إلى الصفر.
+      - افحص مستوى زيت الضاغط يومياً وغيّر الزيت كل 1000 ساعة.
+      - غيّر عنصر الفصل بين الزيت والهواء كل 2000 ساعة أو عند ارتفاع فرق الضغط عن 1 بار.
+      - نظف مبرد الزيت ومبرد الهواء من الغبار كل 250 ساعة باستخدام الهواء المضغوط من الداخل إلى الخارج.
+      - افحص صمام الأمان على خزان الفصل كل ستة أشهر.
+      - إذا تجاوزت حرارة خروج الهواء 110 درجة مئوية فأوقف الحفر وافحص نظام التبريد.
+    hazards:
+      - الهواء المضغوط والزيت الساخن — حرر الضغط واترك الضاغط يبرد قبل الفتح.
+      - الضوضاء العالية — استخدم واقي السمع دائماً.
+      - حريق الضاغط بسبب ارتفاع الحرارة — راقب حرارة خروج الهواء.
+    references: [LOTO-004, MM-DR-001]

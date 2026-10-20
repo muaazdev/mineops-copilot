@@ -1,0 +1,529 @@
+# Falcon Ridge Mining document topics: standard operating procedures and safety procedures.
+
+- code: SOP-001
+  doc_type: sop
+  site: all
+  asset_type: haul_truck
+  en:
+    title: Pre-Start Inspection of Mobile Equipment
+    purpose: Ensures every haul truck and mobile machine is inspected by its operator before the start of each shift.
+    scope: All operators of haul trucks, excavators, drills, graders and water carts.
+    ppe: [Safety helmet, High-visibility vest, Safety glasses, Steel-capped boots]
+    steps:
+      - Complete the electronic pre-start checklist on the in-cab display before moving the machine.
+      - Walk around the machine and check tyres, lights, mirrors, fire suppression gauge and fluid leaks.
+      - Test the horn, reversing alarm, service brake and park brake.
+      - Any critical defect (brakes, steering, fire suppression, seat belt) automatically locks the machine out of operation until a maintenance supervisor signs it off in the system.
+      - Report non-critical defects on the checklist; they generate a work order for the next service.
+      - Sign the checklist electronically with your operator ID.
+    hazards:
+      - Operating with brake or steering defects — critical defect lockout.
+      - Walking around a machine with the engine running — keep three points of contact and stay clear of the articulation zone.
+      - Falls when climbing access ladders — face the ladder and maintain three points of contact.
+    references: [MM-HT-002, MM-HT-003, SOP-002]
+  ar:
+    title: الفحص قبل التشغيل للمعدات المتنقلة
+    purpose: يضمن أن يقوم المشغل بفحص كل شاحنة نقل ومعدة متنقلة قبل بداية كل وردية.
+    scope: جميع مشغلي شاحنات النقل والحفارات وأجهزة الحفر والممهدات وصهاريج المياه.
+    ppe: [خوذة السلامة, سترة عالية الوضوح, نظارات السلامة, أحذية السلامة]
+    steps:
+      - أكمل قائمة الفحص الإلكترونية على شاشة المقصورة قبل تحريك المعدة.
+      - تجول حول المعدة وافحص الإطارات والأضواء والمرايا ومقياس نظام إطفاء الحريق وتسربات السوائل.
+      - اختبر البوق وإنذار الرجوع للخلف وفرامل الخدمة وفرامل الوقوف.
+      - أي عيب حرج (الفرامل أو التوجيه أو نظام إطفاء الحريق أو حزام المقعد) يوقف المعدة عن التشغيل تلقائياً حتى يعتمدها مشرف الصيانة في النظام.
+      - سجل العيوب غير الحرجة في قائمة الفحص، وسيتم إنشاء أمر عمل لها في الصيانة التالية.
+      - وقّع قائمة الفحص إلكترونياً برقم المشغل الخاص بك.
+    hazards:
+      - التشغيل مع وجود عيوب في الفرامل أو التوجيه — الإيقاف التلقائي عند العيوب الحرجة.
+      - التجول حول المعدة والمحرك يعمل — حافظ على ثلاث نقاط تلامس وابتعد عن منطقة المفصل.
+      - السقوط أثناء صعود السلالم — واجه السلم وحافظ على ثلاث نقاط تلامس.
+    references: [MM-HT-002, MM-HT-003, SOP-002]
+  versions:
+    - version: 1
+      effective_date: 2024-02-05
+      en:
+        steps:
+          - Complete the paper pre-start checklist kept in the cab before moving the machine.
+          - Walk around the machine and check tyres, lights, mirrors and fluid leaks.
+          - Test the horn, reversing alarm and brakes.
+          - Report defects to the shift supervisor by radio; the supervisor decides whether the machine may operate.
+          - Hand the completed paper checklist to the supervisor at the end of the shift.
+      ar:
+        steps:
+          - أكمل قائمة الفحص الورقية الموجودة في المقصورة قبل تحريك المعدة.
+          - تجول حول المعدة وافحص الإطارات والأضواء والمرايا وتسربات السوائل.
+          - اختبر البوق وإنذار الرجوع للخلف والفرامل.
+          - أبلغ مشرف الوردية عن العيوب عبر اللاسلكي، ويقرر المشرف ما إذا كان يجوز تشغيل المعدة.
+          - سلّم قائمة الفحص الورقية المكتملة إلى المشرف في نهاية الوردية.
+    - version: 2
+      effective_date: 2025-10-01
+
+- code: SOP-002
+  doc_type: sop
+  site: all
+  asset_type: all
+  effective_date: 2025-04-01
+  en:
+    title: Haul Road Traffic Management and Right of Way
+    purpose: Sets the rules for traffic on haul roads shared by heavy and light vehicles.
+    scope: All haul roads, ramps and intersections at the open-pit sites.
+    ppe: [High-visibility vest, Safety helmet when outside the vehicle]
+    steps:
+      - Heavy equipment always has right of way over light vehicles.
+      - Light vehicles must call on the haul road radio channel before entering a haul road and state their position and direction.
+      - Light vehicles carry a 4 m flag whip and a flashing amber beacon.
+      - Maintain a minimum following distance of 50 m behind a haul truck, and 100 m on ramps.
+      - The speed limit on ramps is 30 km/h loaded and 40 km/h empty; on flat haul roads it is 50 km/h.
+      - Keep left on haul roads; overtaking a moving haul truck is prohibited.
+      - Never park in a haul truck's blind spot; park at the designated light vehicle bays.
+    hazards:
+      - Light vehicle crushed by a haul truck — radio call-up, flags, beacons and right-of-way rules.
+      - Loss of control on ramps — speed limits and berms at half wheel height.
+      - Dust reducing visibility — water carts and reduced speed.
+    references: [SOP-001, SP-007, SP-001]
+  ar:
+    title: إدارة حركة المرور على طرق النقل وأولوية المرور
+    purpose: يحدد قواعد الحركة على طرق النقل المشتركة بين المعدات الثقيلة والمركبات الخفيفة.
+    scope: جميع طرق النقل والمنحدرات والتقاطعات في مواقع التعدين المكشوف.
+    ppe: [سترة عالية الوضوح, خوذة السلامة عند الخروج من المركبة]
+    steps:
+      - للمعدات الثقيلة دائماً أولوية المرور على المركبات الخفيفة.
+      - يجب على المركبات الخفيفة الاتصال عبر قناة لاسلكي طرق النقل قبل الدخول إلى طريق النقل وتحديد موقعها واتجاهها.
+      - تحمل المركبات الخفيفة سارية علم بطول 4 أمتار وإشارة ضوئية كهرمانية وامضة.
+      - حافظ على مسافة 50 متراً على الأقل خلف شاحنة النقل، و100 متر على المنحدرات.
+      - الحد الأقصى للسرعة على المنحدرات 30 كم/ساعة للشاحنة المحملة و40 كم/ساعة للفارغة، و50 كم/ساعة على طرق النقل المستوية.
+      - التزم بالجانب الأيسر على طرق النقل، ويمنع تجاوز شاحنة نقل متحركة.
+      - لا تقف أبداً في النقطة العمياء لشاحنة النقل، واستخدم مواقف المركبات الخفيفة المخصصة.
+    hazards:
+      - سحق المركبة الخفيفة بواسطة شاحنة نقل — الاتصال اللاسلكي والأعلام والإشارات وقواعد الأولوية.
+      - فقدان السيطرة على المنحدرات — حدود السرعة والسواتر الترابية بارتفاع نصف العجلة.
+      - الغبار الذي يقلل الرؤية — صهاريج المياه وتخفيض السرعة.
+    references: [SOP-001, SP-007, SP-001]
+
+- code: SOP-003
+  doc_type: sop
+  site: FRN
+  asset_type: all
+  effective_date: 2025-06-02
+  en:
+    title: Blast Exclusion Zone and Clearance
+    purpose: Defines the clearance of persons and equipment from the blast exclusion zone before firing at Falcon Ridge North Pit.
+    scope: All blasts at Falcon Ridge North Pit.
+    ppe: [Safety helmet, High-visibility vest, Hearing protection]
+    steps:
+      - The shot firer declares the blast time at the pre-shift meeting; blasts are fired at 13:00 only.
+      - The exclusion zone is 500 m for persons and 300 m for equipment from the blast perimeter.
+      - Sentries are posted at every access road with radios and a blast-guard sign.
+      - Sweep the exclusion zone and confirm all persons and equipment are clear before the countdown.
+      - Sound the siren for two minutes before firing and one long blast for all clear.
+      - Re-entry only after the shot firer has inspected the muck pile for misfires and fumes have cleared, at least 15 minutes after firing.
+    hazards:
+      - Fly rock — 500 m exclusion for persons.
+      - Misfires — inspection by the shot firer before re-entry.
+      - Blast fumes (nitrogen oxides) — 15-minute wait and wind direction check.
+    references: [MM-DR-001, ER-003]
+
+- code: SOP-004
+  doc_type: sop
+  site: all
+  asset_type: all
+  effective_date: 2025-03-16
+  ar:
+    title: تزويد المعدات المتنقلة بالوقود
+    purpose: يحدد الإجراءات الآمنة لتزويد شاحنات النقل والمعدات المتنقلة بالوقود في محطات الوقود الثابتة وبواسطة شاحنة الوقود.
+    scope: جميع محطات الوقود وشاحنات الوقود في المواقع الثلاثة.
+    ppe: [سترة عالية الوضوح, نظارات السلامة, قفازات مقاومة للمواد الكيميائية, أحذية السلامة]
+    steps:
+      - أوقف المعدة في منطقة التزويد المحددة وأطفئ المحرك وفعّل فرامل الوقوف.
+      - لا يسمح بالتدخين أو استخدام الهاتف المحمول على بعد 15 متراً من نقطة التزويد.
+      - صل سلك التأريض بين شاحنة الوقود والمعدة قبل فتح فوهة الخزان.
+      - استخدم نظام التزويد السريع ولا تترك الفوهة دون مراقبة أثناء التزويد.
+      - توقف عن التزويد عند 95% من سعة الخزان لترك مساحة لتمدد الوقود.
+      - في حال الانسكاب أوقف التزويد فوراً واستخدم مجموعة احتواء الانسكاب وأبلغ وفق ER-003.
+    hazards:
+      - الحريق بسبب الشرر أو الكهرباء الساكنة — التأريض ومنع التدخين والهواتف.
+      - انسكاب الديزل — مجموعة الاحتواء والإبلاغ الفوري.
+      - تحرك المعدة أثناء التزويد — إطفاء المحرك وفرامل الوقوف.
+    references: [ER-001, ER-003]
+
+- code: SOP-005
+  doc_type: sop
+  site: all
+  asset_type: all
+  en:
+    title: Shift Handover
+    purpose: Ensures safety-critical information passes between outgoing and incoming crews at every shift change.
+    scope: All production and maintenance crews on day and night shifts.
+    ppe: [Not applicable — handover takes place in the crib room]
+    steps:
+      - The outgoing supervisor completes the written handover form covering active isolations, equipment defects, ground conditions and open permits.
+      - Outgoing and incoming supervisors walk the critical areas together when isolations or permits remain active.
+      - Each incoming night-shift operator completes a fatigue self-assessment before starting; a score of 3 or more requires a supervisor review.
+      - The incoming crew signs the handover form after the pre-shift meeting.
+      - Unresolved items are logged as actions with an owner and a due time.
+    hazards:
+      - Lost information about active isolations — written handover and joint walk-through.
+      - Fatigue on night shift — self-assessment and supervisor review (see SP-001).
+      - Rushing at shift change — 20-minute overlap between crews.
+    references: [LOTO-001, SP-001, SP-006]
+  ar:
+    title: تسليم واستلام الوردية
+    purpose: يضمن نقل المعلومات المتعلقة بالسلامة بين الطاقم المغادر والطاقم القادم عند كل تغيير للوردية.
+    scope: جميع أطقم الإنتاج والصيانة في الورديات النهارية والليلية.
+    ppe: [لا ينطبق — يتم التسليم في غرفة الاستراحة]
+    steps:
+      - يكمل المشرف المغادر نموذج التسليم المكتوب الذي يشمل أعمال العزل القائمة وعيوب المعدات وحالة الأرض والتصاريح المفتوحة.
+      - يقوم المشرفان المغادر والقادم بجولة مشتركة في المناطق الحرجة عند وجود أعمال عزل أو تصاريح قائمة.
+      - يكمل كل مشغل في الوردية الليلية القادمة تقييماً ذاتياً للإرهاق قبل البدء، وتتطلب الدرجة 3 أو أكثر مراجعة من المشرف.
+      - يوقع الطاقم القادم على نموذج التسليم بعد اجتماع ما قبل الوردية.
+      - تسجل البنود غير المحلولة كإجراءات مع تحديد المسؤول والموعد.
+    hazards:
+      - فقدان المعلومات حول أعمال العزل القائمة — التسليم المكتوب والجولة المشتركة.
+      - الإرهاق في الوردية الليلية — التقييم الذاتي ومراجعة المشرف (انظر SP-001).
+      - الاستعجال عند تغيير الوردية — تداخل لمدة 20 دقيقة بين الطاقمين.
+    references: [LOTO-001, SP-001, SP-006]
+  versions:
+    - version: 1
+      effective_date: 2024-04-10
+      en:
+        steps:
+          - The outgoing supervisor gives a verbal handover to the incoming supervisor in the crib room.
+          - Active isolations are communicated verbally and remain recorded on the isolation register.
+          - The incoming supervisor briefs the crew at the pre-shift meeting.
+    - version: 2
+      effective_date: 2026-08-01
+
+- code: SOP-006
+  doc_type: sop
+  site: JNU
+  asset_type: all
+  effective_date: 2025-05-19
+  en:
+    title: Underground Ventilation and Gas Monitoring
+    purpose: Sets ventilation and gas monitoring requirements for the underground workings at Jabal Noor Underground.
+    scope: All underground headings, stopes and workshops at Jabal Noor.
+    ppe: [Safety helmet with cap lamp, Self-rescuer, Personal gas detector, Hearing protection]
+    steps:
+      - Every person underground carries a personal four-gas detector (O2, CO, NO2, H2S) that is bump-tested at the start of the shift.
+      - Evacuate the heading if oxygen falls below 19.5% or carbon monoxide exceeds 30 ppm.
+      - Diesel equipment may operate only where the airflow is at least 0.06 m³/s per kW of engine power.
+      - Auxiliary fans must run before entering a development heading; the vent duct must be within 15 m of the face.
+      - Re-entry after blasting only after the gas readings at the face are below the limits and the shift boss approves.
+    hazards:
+      - Oxygen deficiency and toxic gases — personal detectors and evacuation limits.
+      - Diesel exhaust — minimum airflow per kW.
+      - Blast fumes — re-entry only after clearance readings.
+    references: [ER-002, SOP-007, SP-004]
+
+- code: SOP-007
+  doc_type: sop
+  site: JNU
+  asset_type: all
+  effective_date: 2025-07-28
+  ar:
+    title: التحكم في الأرض وتقشير الصخور في الأعمال الجوفية
+    purpose: يحدد متطلبات فحص الأرض وتقشير الصخور المفككة وتركيب الدعامات في منجم جبل نور الجوفي.
+    scope: جميع الأنفاق والمقاطع والمخازن في منجم جبل نور الجوفي.
+    ppe: [خوذة السلامة مع مصباح, جهاز الإنقاذ الذاتي, نظارات السلامة, قفازات العمل, أحذية السلامة]
+    steps:
+      - افحص السقف والجدران عند بداية كل وردية وبعد كل تفجير قبل الدخول إلى المقطع.
+      - قم بتقشير الصخور المفككة من منطقة مدعومة باتجاه الواجهة، ولا تقف أبداً تحت سقف غير مدعوم.
+      - استخدم آلة التقشير الميكانيكية حيث يتجاوز ارتفاع المقطع 5 أمتار.
+      - ركب مسامير الصخور بنمط 1.2 × 1.2 متر مع شبكة فولاذية في جميع المقاطع الجديدة.
+      - أبلغ المهندس الجيوتقني عن أي تشققات جديدة أو صوت تشقق في الصخور أو تساقط متكرر.
+      - سجل نتائج فحص الأرض في سجل الوردية.
+    hazards:
+      - سقوط الصخور من السقف — التقشير والتدعيم وعدم الوقوف تحت سقف غير مدعوم.
+      - انفجار الصخور تحت الضغط — مراقبة الإشارات وإبلاغ المهندس الجيوتقني.
+      - إصابات اليد أثناء التقشير اليدوي — استخدام قضبان التقشير المناسبة والقفازات.
+    references: [SOP-006, ER-002]
+
+- code: SOP-008
+  doc_type: sop
+  site: WSP
+  asset_type: all
+  effective_date: 2025-01-08
+  en:
+    title: Phosphate Dust Control
+    purpose: Controls airborne phosphate dust from mining, hauling, crushing and stockpiling at Wadi Sahm Phosphate.
+    scope: Pit, haul roads, crushing plant and stockpiles at Wadi Sahm.
+    ppe: [Dust mask P2 or better, Safety glasses, Safety helmet]
+    steps:
+      - Water carts spray haul roads at least every 2 hours during the day shift and every 3 hours at night.
+      - Dust suppression sprays at the crusher dump hopper and transfer points must operate whenever material flows.
+      - Stop haulage on a road when visibility falls below 100 m due to dust.
+      - Real-time dust monitors at the plant boundary alarm at 3 mg/m³ (respirable) averaged over 15 minutes.
+      - Clean up spillage on conveyors daily to prevent re-entrainment of dust.
+    hazards:
+      - Respiratory exposure — water suppression, sprays and P2 masks.
+      - Reduced visibility on haul roads — stop haulage below 100 m visibility.
+      - Slippery roads from overwatering — spray in patterns, not continuous flooding.
+    references: [SOP-002, MM-CV-001]
+
+- code: SOP-009
+  doc_type: sop
+  site: all
+  asset_type: crusher
+  effective_date: 2024-12-02
+  en:
+    title: Working at Height on Crusher Structures
+    purpose: Defines fall prevention controls when working on crusher platforms, chutes and the feed hopper.
+    scope: All work above 1.8 m on crusher structures.
+    ppe: [Full-body harness with double lanyard, Safety helmet with chin strap, Safety glasses, Steel-capped boots]
+    steps:
+      - Use fixed platforms and handrails where available; harnesses are required where edge protection is missing.
+      - Inspect the harness and lanyards before each use; remove any harness that arrested a fall.
+      - Anchor to an engineered anchor point rated for 15 kN; never anchor to handrails or pipework.
+      - Maintain 100% tie-off when moving between anchor points using the double lanyard.
+      - A rescue plan must be in place before work; suspended workers must be rescued within 15 minutes.
+      - Barricade the area below and tie tools to prevent dropped objects.
+    hazards:
+      - Falls from height — fixed platforms, harness and 100% tie-off.
+      - Suspension trauma — rescue within 15 minutes.
+      - Dropped objects — barricades and tool lanyards.
+    references: [LOTO-003, MM-CR-001]
+
+- code: SOP-010
+  doc_type: sop
+  site: all
+  asset_type: pump
+  effective_date: 2025-08-11
+  en:
+    title: Pit Dewatering Operations
+    purpose: Describes routine operation of pit dewatering pumps and sump management.
+    scope: In-pit sumps and dewatering pumps at all open-pit sites and the Jabal Noor main sump.
+    ppe: [Safety helmet, Life jacket within 2 m of a sump edge, High-visibility vest, Steel-capped boots]
+    steps:
+      - Check sump levels each shift; the pump start level is 1.5 m and the high-level alarm is 3.0 m.
+      - Always keep one standby pump available for each duty pump.
+      - Inspect the suction strainer weekly and clear debris.
+      - Wear a life jacket and work in pairs within 2 m of a sump edge.
+      - Record pumped volumes from the flowmeter for the water balance report.
+    hazards:
+      - Drowning — life jackets and working in pairs near sumps.
+      - Pit flooding if pumps fail — standby pumps and high-level alarms (see ER-005).
+      - Electrical faults in wet areas — RCD protection on all pump circuits.
+    references: [MM-PU-001, MM-PU-002, ER-005]
+
+- code: SP-001
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  en:
+    title: Fatigue Management
+    purpose: Controls the risk of fatigue for workers on 12-hour rotating rosters, with emphasis on night shifts.
+    scope: All employees and contractors, in particular haul truck and mobile equipment operators.
+    ppe: [Not applicable]
+    steps:
+      - Shifts are limited to 12 hours, including handover; overtime beyond 12 hours requires the site manager's approval.
+      - No worker may work more than 4 consecutive night shifts; the roster must allow at least 48 hours off after a night block.
+      - Haul truck operators on night shift take a mandatory 30-minute break after 4 hours of operation.
+      - Any operator who experiences a microsleep must stop the machine safely and report it immediately to the supervisor; reporting is never disciplined.
+      - Supervisors review fatigue self-assessments at handover (SOP-005) and reassign operators with a score of 3 or more.
+      - Fatigue-related incidents are investigated per SP-006 and reviewed at the monthly safety committee.
+    hazards:
+      - Microsleep while operating equipment — breaks, roster limits and immediate reporting.
+      - Cumulative sleep debt on night blocks — maximum 4 consecutive nights.
+      - Driving home after a night shift — rest area available on site.
+    references: [SOP-005, SOP-002, SP-006]
+  ar:
+    title: إدارة الإرهاق
+    purpose: يتحكم في مخاطر الإرهاق للعاملين في الورديات الدورية ذات الاثنتي عشرة ساعة مع التركيز على الورديات الليلية.
+    scope: جميع الموظفين والمقاولين، وبخاصة مشغلو شاحنات النقل والمعدات المتنقلة.
+    ppe: [لا ينطبق]
+    steps:
+      - تقتصر مدة الوردية على 12 ساعة شاملة التسليم، ويتطلب العمل الإضافي بعد 12 ساعة موافقة مدير الموقع.
+      - لا يجوز لأي عامل العمل أكثر من 4 ورديات ليلية متتالية، ويجب أن يتيح الجدول 48 ساعة راحة على الأقل بعد كل مجموعة ورديات ليلية.
+      - يأخذ مشغلو شاحنات النقل في الوردية الليلية استراحة إلزامية مدتها 30 دقيقة بعد 4 ساعات من التشغيل.
+      - يجب على أي مشغل يتعرض لغفوة قصيرة أن يوقف المعدة بأمان ويبلغ المشرف فوراً، ولا تترتب على الإبلاغ أي عقوبة.
+      - يراجع المشرفون التقييمات الذاتية للإرهاق عند التسليم (SOP-005) ويعيدون توزيع المشغلين الحاصلين على درجة 3 أو أكثر.
+      - يتم التحقيق في الحوادث المرتبطة بالإرهاق وفق SP-006 ومراجعتها في لجنة السلامة الشهرية.
+    hazards:
+      - الغفوة القصيرة أثناء تشغيل المعدات — الاستراحات وحدود الجدول والإبلاغ الفوري.
+      - تراكم نقص النوم في الورديات الليلية — 4 ليالٍ متتالية كحد أقصى.
+      - القيادة إلى المنزل بعد الوردية الليلية — توفر منطقة استراحة في الموقع.
+    references: [SOP-005, SOP-002, SP-006]
+  versions:
+    - version: 1
+      effective_date: 2024-01-20
+      en:
+        steps:
+          - Shifts are limited to 12 hours, including handover.
+          - No worker may work more than 7 consecutive shifts.
+          - Operators take breaks at the discretion of the shift supervisor.
+          - Operators who feel tired should inform their supervisor.
+      ar:
+        steps:
+          - تقتصر مدة الوردية على 12 ساعة شاملة التسليم.
+          - لا يجوز لأي عامل العمل أكثر من 7 ورديات متتالية.
+          - يأخذ المشغلون الاستراحات حسب تقدير مشرف الوردية.
+          - يجب على المشغلين الذين يشعرون بالتعب إبلاغ المشرف.
+    - version: 2
+      effective_date: 2026-08-01
+
+- code: SP-002
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  effective_date: 2025-04-15
+  en:
+    title: Heat Stress Management
+    purpose: Protects workers from heat illness during the hot season, using the wet bulb globe temperature (WBGT) index.
+    scope: All outdoor and plant work at all sites, May to October in particular.
+    ppe: [Wide-brim helmet cover, Light-coloured long-sleeve clothing, Cooling vest where issued]
+    steps:
+      - The site control room publishes the WBGT reading every hour on the radio and on the site screens.
+      - WBGT 28 to 30 °C — drink 250 ml of water every 15 minutes and work in shaded areas where possible.
+      - WBGT 30 to 32 °C — 45 minutes work and 15 minutes rest in a cooled shelter.
+      - WBGT 32 to 34 °C — 30 minutes work and 30 minutes rest; no lone working.
+      - WBGT above 34 °C — stop all non-essential outdoor work.
+      - Outdoor work between 12:00 and 15:00 from 15 June to 15 September requires a heat stress permit.
+      - Report symptoms of heat exhaustion (dizziness, headache, cramps) immediately; move the person to shade and cool them.
+    hazards:
+      - Heat exhaustion and heat stroke — WBGT-based work-rest cycles and hydration.
+      - Dehydration — water stations every 200 m in the pit.
+      - Hot surfaces on equipment — gloves and shade.
+    references: [ER-004, SP-003]
+  ar:
+    title: إدارة الإجهاد الحراري
+    purpose: يحمي العاملين من الأمراض الناتجة عن الحرارة خلال موسم الحر باستخدام مؤشر درجة حرارة الكرة الرطبة (WBGT).
+    scope: جميع الأعمال الخارجية وأعمال المصانع في جميع المواقع، وبخاصة من مايو إلى أكتوبر.
+    ppe: [غطاء خوذة عريض الحافة, ملابس فاتحة اللون بأكمام طويلة, سترة تبريد حيثما توفرت]
+    steps:
+      - تنشر غرفة التحكم قراءة مؤشر WBGT كل ساعة عبر اللاسلكي وعلى شاشات الموقع.
+      - مؤشر WBGT من 28 إلى 30 درجة مئوية — اشرب 250 مل من الماء كل 15 دقيقة واعمل في الظل حيثما أمكن.
+      - مؤشر WBGT من 30 إلى 32 درجة مئوية — 45 دقيقة عمل و15 دقيقة راحة في مكان مكيف.
+      - مؤشر WBGT من 32 إلى 34 درجة مئوية — 30 دقيقة عمل و30 دقيقة راحة، ويمنع العمل الفردي.
+      - مؤشر WBGT أعلى من 34 درجة مئوية — أوقف جميع الأعمال الخارجية غير الضرورية.
+      - يتطلب العمل الخارجي بين الساعة 12:00 و15:00 من 15 يونيو إلى 15 سبتمبر تصريح إجهاد حراري.
+      - أبلغ فوراً عن أعراض الإنهاك الحراري (الدوار والصداع والتشنجات)، وانقل الشخص إلى الظل وقم بتبريده.
+    hazards:
+      - الإنهاك الحراري وضربة الشمس — دورات العمل والراحة حسب مؤشر WBGT وشرب الماء.
+      - الجفاف — محطات مياه كل 200 متر في الحفرة.
+      - الأسطح الساخنة على المعدات — القفازات والظل.
+    references: [ER-004, SP-003]
+
+- code: SP-003
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  effective_date: 2024-10-06
+  ar:
+    title: متطلبات معدات الوقاية الشخصية
+    purpose: يحدد الحد الأدنى من معدات الوقاية الشخصية المطلوبة في جميع مواقع فالكون ريدج للتعدين والمتطلبات الإضافية حسب المهمة.
+    scope: جميع الموظفين والمقاولين والزوار.
+    ppe: [خوذة السلامة, سترة عالية الوضوح, نظارات السلامة, أحذية السلامة ذات المقدمة الفولاذية]
+    steps:
+      - الحد الأدنى في جميع المناطق التشغيلية هو الخوذة والسترة عالية الوضوح ونظارات السلامة وأحذية السلامة.
+      - واقي السمع إلزامي في المناطق التي يتجاوز فيها مستوى الضوضاء 85 ديسيبل، مثل الكسارات والضواغط.
+      - كمامة الغبار من فئة P2 إلزامية في محطة التكسير ومنطقة المخزون في موقع وادي سهم.
+      - يحمل كل شخص في منجم جبل نور الجوفي جهاز إنقاذ ذاتي ومصباح خوذة وجهاز كشف غاز شخصي.
+      - تستبدل الخوذة كل ثلاث سنوات أو فوراً بعد أي صدمة.
+      - يتم فحص معدات الوقاية الشخصية قبل كل استخدام، وتسلم المعدات التالفة للمخزن مقابل بديل.
+    hazards:
+      - إصابات الرأس والعين — الخوذة والنظارات في جميع الأوقات.
+      - فقدان السمع الناتج عن الضوضاء — واقي السمع فوق 85 ديسيبل.
+      - استنشاق الغبار — كمامات P2 في المناطق المحددة.
+    references: [SP-002, SOP-008, SOP-006]
+
+- code: SP-004
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  en:
+    title: Confined Space Entry
+    purpose: Controls entry into confined spaces such as crusher chambers, bins, tanks, sumps and pipe culverts.
+    scope: Every confined space listed on the site confined space register.
+    ppe: [Full-body harness with rescue line, Personal four-gas detector, Safety helmet, Respirator as per the permit]
+    steps:
+      - A confined space entry permit is issued by an authorised person before every entry.
+      - Isolate all energy and process connections per LOTO-001 and blank or disconnect pipelines.
+      - Test the atmosphere before entry and monitor it continuously during entry with a four-gas detector.
+      - Oxygen must be between 19.5% and 23.5%; flammable gas below 5% LEL; CO below 30 ppm; H2S below 10 ppm.
+      - A trained standby person remains at the entry point for the whole entry and keeps an entry log.
+      - A written rescue plan with rescue equipment (tripod and winch) is in place before entry.
+    hazards:
+      - Toxic or oxygen-deficient atmosphere — continuous monitoring and limits.
+      - Engulfment — isolation of feeders and process lines.
+      - Delayed rescue — standby person and rescue plan in place before entry.
+    references: [LOTO-001, LOTO-003, SP-005]
+  versions:
+    - version: 1
+      effective_date: 2024-07-01
+      en:
+        steps:
+          - A confined space entry permit is issued by an authorised person before every entry.
+          - Isolate all energy per LOTO-001.
+          - Test the atmosphere with a gas detector before entry.
+          - Oxygen must be between 19.5% and 23.5%.
+          - A second person should be nearby during the entry.
+    - version: 2
+      effective_date: 2025-12-01
+
+- code: SP-005
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  effective_date: 2025-02-03
+  en:
+    title: Hot Work Permit
+    purpose: Controls fire risks from welding, cutting, grinding and other hot work outside the designated workshop bays.
+    scope: All hot work outside the designated welding bays.
+    ppe: [Welding helmet, Leather welding gloves, Flame-retardant clothing, Safety boots]
+    steps:
+      - A hot work permit is required for every hot work task outside the welding bays; it is valid for one shift only.
+      - Remove combustible materials within 11 m of the work or cover them with fire blankets.
+      - A fire watch with a 9 kg dry-powder extinguisher stays at the work area during hot work and for 30 minutes after.
+      - Never perform hot work on tanks, drums or fuel lines until they are gas-freed and tested.
+      - On mobile equipment, disable the fire suppression system actuator only with the permit and re-arm it immediately after.
+    hazards:
+      - Fire from sparks — 11 m clearance and fire watch.
+      - Explosion of residual fuel vapours — gas-freeing and testing.
+      - Burns and arc eye — welding PPE.
+    references: [ER-001, SP-004]
+
+- code: SP-006
+  doc_type: safety_procedure
+  site: all
+  asset_type: all
+  effective_date: 2025-05-27
+  ar:
+    title: الإبلاغ عن الحوادث والتحقيق فيها
+    purpose: يحدد طريقة الإبلاغ عن الحوادث والحوادث الوشيكة وتصنيفها والتحقيق فيها في جميع مواقع الشركة.
+    scope: جميع الحوادث والإصابات والحوادث الوشيكة وأضرار المعدات والحوادث البيئية.
+    ppe: [لا ينطبق]
+    steps:
+      - أبلغ عن أي حادث أو حادث وشيك للمشرف فوراً، وسجله في نظام الحوادث قبل نهاية الوردية.
+      - صنف الحادث حسب الشدة إلى حادث وشيك أو إسعافات أولية أو علاج طبي أو إصابة مضيعة للوقت.
+      - يجب إبلاغ مدير الموقع خلال ساعة واحدة عن أي إصابة مضيعة للوقت أو حادث عالي الخطورة.
+      - يتم الحفاظ على موقع الحادث دون تغيير حتى يسمح المحقق بذلك، إلا لإنقاذ الأرواح.
+      - يجري فريق التحقيق تحليل الأسباب الجذرية خلال 7 أيام للحوادث الخطيرة.
+      - تسجل الإجراءات التصحيحية مع تحديد المسؤول والموعد النهائي وتتابع حتى الإغلاق.
+      - إذا ارتفع عدد الحوادث في أي موقع بشكل ملحوظ خلال أربعة أسابيع، فيجب مراجعة التغييرات الأخيرة مثل جداول الورديات.
+    hazards:
+      - عدم الإبلاغ عن الحوادث الوشيكة — ثقافة الإبلاغ دون عقوبة.
+      - ضياع الأدلة — الحفاظ على موقع الحادث.
+      - تكرار الحوادث — متابعة الإجراءات التصحيحية حتى الإغلاق.
+    references: [SP-001, SOP-005, ER-004]
+
+- code: SP-007
+  doc_type: safety_procedure
+  site: all
+  asset_type: haul_truck
+  effective_date: 2025-09-22
+  en:
+    title: Light Vehicle Interaction with Heavy Equipment
+    purpose: Prevents collisions between light vehicles and heavy mobile equipment, the highest fatal risk in open-pit mining.
+    scope: All light vehicles, buses and service trucks entering operational areas.
+    ppe: [High-visibility vest, Safety helmet when outside the vehicle]
+    steps:
+      - Light vehicles entering the pit must have a valid pit permit, a two-way radio on the haul road channel, a flag whip and an amber beacon.
+      - Obtain positive radio communication with a haul truck operator before passing within 50 m of the truck.
+      - Approach a parked haul truck only from the front-left (operator side) after eye contact and radio confirmation.
+      - Proximity detection alarms on haul trucks warn at 50 m and alarm at 20 m; never ignore a proximity alarm.
+      - Light vehicles must not enter the loading area at an excavator while a truck is being loaded.
+    hazards:
+      - Collision with a haul truck — radio, proximity detection and approach rules.
+      - Blind spots of haul trucks — approach only from the operator side.
+      - Loading area interactions — no light vehicles during loading.
+    references: [SOP-002, SOP-001]

@@ -1,9 +1,16 @@
-# Override for hosts that forbid raising container rlimits (e.g. Claude Code cloud sandboxes,
-# some rootless/gVisor setups), where OpenSearch fails with "error setting rlimit type 8".
+# Override for constrained hosts (e.g. Claude Code cloud sandboxes, some rootless/gVisor setups).
 # Usage: make up-all RESTRICTED=1
-# Effect: no memlock ulimit and bootstrap.memory_lock=false (heap may swap; fine for dev).
+#
+# 1. Hosts that forbid raising container rlimits fail with "error setting rlimit type 8".
+#    -> no memlock ulimit and bootstrap.memory_lock=false (heap may swap; fine for dev).
+# 2. Hosts whose disk reports a high *percentage* used (large shared volume, small quota) trip
+#    OpenSearch's percentage watermarks: above 90% it blocks index creation
+#    ("cluster create-index blocked"). -> absolute free-space watermarks instead.
 services:
   opensearch:
     ulimits: !reset {}
     environment:
       bootstrap.memory_lock: "false"
+      cluster.routing.allocation.disk.watermark.low: "2gb"
+      cluster.routing.allocation.disk.watermark.high: "1gb"
+      cluster.routing.allocation.disk.watermark.flood_stage: "500mb"

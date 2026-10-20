@@ -1,0 +1,63 @@
+{"qid": "en01", "query": "How many workers can share one lock on an isolation point?", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en02", "query": "How many workers can share one lock on an isolation point?", "group": "en", "filter": {"as_of": "2025-01-01"}, "tags": ["as_of"]}
+{"qid": "en03", "query": "test before touch with a voltage tester to verify zero energy", "group": "en", "filter": {}, "tags": []}
+{"qid": "en04", "query": "belt clamp to stop rollback on an inclined conveyor", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en05", "query": "what must be done before entering the crushing chamber to clear a blockage", "group": "en", "filter": {}, "tags": []}
+{"qid": "en06", "query": "release residual hydraulic pressure on an excavator before loosening a fitting", "group": "en", "filter": {}, "tags": []}
+{"qid": "en07", "query": "haul truck engine oil change interval", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en08", "query": "haul truck engine oil change interval", "group": "en", "filter": {"as_of": "2025-06-01"}, "tags": ["as_of"]}
+{"qid": "en09", "query": "target cold pressure for nitrogen tyre inflation", "group": "en", "filter": {}, "tags": []}
+{"qid": "en10", "query": "exclusion zone around a heat damaged tyre", "group": "en", "filter": {}, "tags": []}
+{"qid": "en11", "query": "when should excavator bucket teeth be replaced", "group": "en", "filter": {}, "tags": []}
+{"qid": "en12", "query": "jaw crusher liner replacement remaining thickness", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en13", "query": "jaw crusher liner replacement remaining thickness", "group": "en", "filter": {"as_of": "2025-03-01"}, "tags": ["as_of"]}
+{"qid": "en14", "query": "crusher main bearing temperature alarm and trip setpoints", "group": "en", "filter": {"site": "FRN"}, "tags": ["filter"]}
+{"qid": "en15", "query": "repeated high temperature trips on the same crusher bearing", "group": "en", "filter": {}, "tags": []}
+{"qid": "en16", "query": "conveyor belt mistracking and spillage at the tail pulley", "group": "en", "filter": {}, "tags": []}
+{"qid": "en17", "query": "barrier fluid pressure for a dewatering pump mechanical seal", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en18", "query": "pump motor keeps tripping on overload", "group": "en", "filter": {"site": "JNU"}, "tags": ["filter"]}
+{"qid": "en19", "query": "pump motor keeps tripping on overload", "group": "en", "filter": {"site": "WSP"}, "tags": ["filter"]}
+{"qid": "en20", "query": "what happens when a critical defect is found during the pre-start check", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en21", "query": "speed limit on ramps for a loaded haul truck", "group": "en", "filter": {}, "tags": []}
+{"qid": "en22", "query": "blast exclusion distance for people", "group": "en", "filter": {"site": "FRN"}, "tags": ["filter"]}
+{"qid": "en23", "query": "oxygen and carbon monoxide limits for evacuating a heading", "group": "en", "filter": {}, "tags": []}
+{"qid": "en24", "query": "dust monitor alarm level at the plant boundary", "group": "en", "filter": {}, "tags": []}
+{"qid": "en25", "query": "anchor point rating for a harness on crusher structures", "group": "en", "filter": {}, "tags": []}
+{"qid": "en26", "query": "sump pump start level and high level alarm", "group": "en", "filter": {}, "tags": []}
+{"qid": "en27", "query": "maximum number of consecutive night shifts", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en28", "query": "maximum number of consecutive shifts a worker may work", "group": "en", "filter": {"as_of": "2025-06-01"}, "tags": ["as_of"]}
+{"qid": "en29", "query": "work rest cycle when the WBGT is 31 degrees", "group": "en", "filter": {}, "tags": []}
+{"qid": "en30", "query": "standby person and rescue plan for confined space entry", "group": "en", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "en31", "query": "how long does the fire watch stay after hot work", "group": "en", "filter": {}, "tags": []}
+{"qid": "en32", "query": "how should a light vehicle approach a parked haul truck", "group": "en", "filter": {}, "tags": []}
+{"qid": "en33", "query": "operator actions when a haul truck catches fire", "group": "en", "filter": {}, "tags": []}
+{"qid": "en34", "query": "reporting a diesel spill larger than 200 litres", "group": "en", "filter": {}, "tags": []}
+{"qid": "en35", "query": "what to do when the pit sump level keeps rising", "group": "en", "filter": {}, "tags": []}
+{"qid": "ar01", "query": "كم عدد العمال الذين يمكنهم مشاركة قفل واحد على نقطة العزل؟", "group": "ar", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "ar02", "query": "كم عدد العمال الذين يمكنهم مشاركة قفل واحد على نقطة العزل؟", "group": "ar", "filter": {"as_of": "2025-01-01"}, "tags": ["as_of"]}
+{"qid": "ar03", "query": "متى يتم تغيير زيت المحرك في شاحنة النقل؟", "group": "ar", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "ar04", "query": "حد إنذار حرارة المحمل الرئيسي في الكسارة", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar05", "query": "متى يجب استبدال أسنان الدلو؟", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar06", "query": "ماذا يحدث عند اكتشاف عيب حرج أثناء الفحص قبل التشغيل؟", "group": "ar", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "ar07", "query": "الحد الأقصى للسرعة على المنحدرات لشاحنة محملة", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar08", "query": "تقييم الإرهاق الذاتي لمشغلي الوردية الليلية عند التسليم", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar09", "query": "الحد الأقصى لعدد الورديات الليلية المتتالية", "group": "ar", "filter": {}, "tags": ["superseded_trap"]}
+{"qid": "ar10", "query": "دورة العمل والراحة حسب مؤشر WBGT", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar11", "query": "متى يجب استبدال خوذة السلامة؟", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar12", "query": "مهلة إبلاغ مدير الموقع عن الإصابة المضيعة للوقت", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar13", "query": "تأريض شاحنة الوقود قبل تزويد المعدة بالوقود", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar14", "query": "تقشير الصخور المفككة في الأنفاق", "group": "ar", "filter": {"site": "JNU"}, "tags": ["filter"]}
+{"qid": "ar15", "query": "ماذا يفعل المشغل عند اشتعال حريق في شاحنة النقل؟", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar16", "query": "زمن وصول سيارة الإسعاف إلى أي نقطة في الحفرة", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar17", "query": "صيانة ضاغط الهواء في جهاز الحفر", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar18", "query": "اختبار فرامل الوقوف على منحدر", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar19", "query": "عزل الكسارة قبل الدخول إلى غرفة التكسير", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar20", "query": "درجة حرارة مكبس الفلكنة عند وصل السير", "group": "ar", "filter": {}, "tags": []}
+{"qid": "ar21", "query": "اجراء العزل والاقفال ووضع البطاقات", "group": "ar", "filter": {}, "tags": ["normalisation"]}
+{"qid": "ar22", "query": "تكرار الايقاف بسبب ارتفاع حرارة المحمل مرتين خلال 30 يوما", "group": "ar", "filter": {}, "tags": ["normalisation"]}
+{"qid": "x01", "query": "minimum brake lining thickness on haul trucks", "group": "cross", "filter": {}, "tags": ["en_to_ar"]}
+{"qid": "x02", "query": "hot vulcanising temperature for a conveyor belt splice", "group": "cross", "filter": {}, "tags": ["en_to_ar"]}
+{"qid": "x03", "query": "maximum distance from a work place to a refuge chamber underground", "group": "cross", "filter": {}, "tags": ["en_to_ar"]}
+{"qid": "x04", "query": "مسافة الحظر للأشخاص أثناء التفجير", "group": "cross", "filter": {}, "tags": ["ar_to_en"]}
+{"qid": "x05", "query": "مدة مراقبة الحريق بعد أعمال اللحام", "group": "cross", "filter": {}, "tags": ["ar_to_en"]}
+{"qid": "x06", "query": "حدود الأكسجين وأول أكسيد الكربون للإخلاء في المنجم الجوفي", "group": "cross", "filter": {}, "tags": ["ar_to_en"]}
